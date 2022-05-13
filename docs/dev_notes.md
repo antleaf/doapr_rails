@@ -49,3 +49,12 @@ config.action_mailer.default_url_options = { host: 'example.com' }
 ```
 
 ### Javascript and Bootstrap
+Notes from: https://blog.eq8.eu/til/how-to-use-bootstrap-5-in-rails-7.html
+```bash
+bin/importmap pin bootstrap
+```
+
+In Gemfile:
+```ruby
+gem 'bootstrap', '~> 5.1.3'
+```

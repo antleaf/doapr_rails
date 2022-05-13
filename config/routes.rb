@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   passwordless_for :users
+
+  root 'home#index'
+  get 'home', to: 'home#index'
 end
