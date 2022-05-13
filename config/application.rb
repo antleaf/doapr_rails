@@ -33,7 +33,7 @@ module DoaprRailsGit
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    config.action_mailer.default_url_options = { host: '81.178.112.19', port: 3000 }
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   end
 end

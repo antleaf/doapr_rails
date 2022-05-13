@@ -1,0 +1,24 @@
+div.site-header-message {
+  //font-weight: bold;
+  text-align: center;
+  border: 2px solid #cdcdcd;
+  background-color: yellow;
+}
+
+
+a.site-header,a.site-header:hover,a.site-header:visited {
+  text-decoration: none;
+  color: #555555;
+}
+
+div.site-header {
+  font-weight: bold;
+  font-size: 250%;
+  //margin-bottom: 20px;
+}
+
+div.site-sub-header {
+  font-size: 85%;
+  font-style: italic;
+  margin-top: 10px;
+}

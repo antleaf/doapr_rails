@@ -1,0 +1,18 @@
+%div.row
+  %div.col-sm-6
+    %div.site-header
+      %a.site-header{:href=>"/"} DOAPR
+  %div.col-sm-6
+    - if current_user then
+      %p.text-end
+        = "Signed in as #{current_user.email}"
+        = link_to 'Logout', '/sign_out'
+    - else
+      %p.text-end
+        = link_to 'Login', '/sign_in'
+%div.row
+  %div.col
+    - flash.each do |type, msg|
+      %div{:class => 'alert alert-danger',:role => 'alert'}
+        = msg
+%hr

@@ -48,6 +48,9 @@ Add to `./config/application.rb`:
 config.action_mailer.default_url_options = { host: 'example.com' }
 ```
 
+Added `passwordless.rb`
+
+
 ### Javascript and Bootstrap
 Notes from: https://blog.eq8.eu/til/how-to-use-bootstrap-5-in-rails-7.html
 ```bash
