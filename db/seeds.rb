@@ -1,3 +1,5 @@
+require 'csv'
+this_folder_path = File.dirname(__FILE__)
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -8,6 +10,7 @@
 
 Role.destroy_all
 User.destroy_all
+Discipline.destroy_all
 
 admin_role = Role.create(name: 'admin')
 editor_role = Role.create(name: 'editor')
@@ -20,3 +23,8 @@ admin_user = User.create(
 
 admin_user.roles << admin_role
 admin_user.roles << editor_role
+
+
+CSV.foreach("#{this_folder_path}/source_data/disciplines.csv",{headers: true}) do |row|
+  Discipline.create(name: row['Name'])
+end

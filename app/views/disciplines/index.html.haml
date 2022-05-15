@@ -1,23 +1,19 @@
-%h1 Listing disciplines
+%h4.page-title All Disciplines
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Slug
-      %th
-      %th
-      %th
+%div.row
+  %div.col-lg-6
+    - if policy(Discipline).create?
+      = link_to 'New Discipline', new_discipline_path, :class => "btn btn-info btn-xs"
+  %div.col-lg-6.right-aligned
+    hello
+    -# = render "_shared/download_machine_readable_data_buttons"
 
-  %tbody
-    - @disciplines.each do |discipline|
-      %tr
-        %td= discipline.name
-        %td= discipline.slug
-        %td= link_to 'Show', discipline
-        %td= link_to 'Edit', edit_discipline_path(discipline)
-        %td= link_to 'Destroy', discipline, method: :delete, data: { confirm: 'Are you sure?' }
+= render(:partial => 'table',:locals => {:discipline_list => @disciplines})
 
-%br
-
-= link_to 'New Discipline', new_discipline_path
+%div.row
+  %div.col-lg-6
+    - if policy(Discipline).create?
+      = link_to 'New Discipline', new_discipline_path, :class => "btn btn-info btn-xs"
+  %div.col-lg-6.right-aligned
+    hello
+    -# = render "_shared/download_machine_readable_data_buttons"
