@@ -6,6 +6,8 @@ ruby "2.7.2"
 gem 'passwordless'
 gem 'bootstrap', '~> 5.1.3'
 gem "haml-rails", "~> 2.0"
+gem 'friendly_id', '~> 5.4.0'
+gem "pundit"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"

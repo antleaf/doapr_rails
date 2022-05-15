@@ -1,6 +1,7 @@
 class AboutController < ApplicationController
 
   def index
-    require_user!
+    authorize self
+    # require_user!
   end
 end

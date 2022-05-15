@@ -61,3 +61,12 @@ In Gemfile:
 ```ruby
 gem 'bootstrap', '~> 5.1.3'
 ```
+
+### Friendly ID
+Add to gem file
+
+generate models with slug:
+`rails g scaffold discipline name:string slug:uniq`
+
+### Many-to-many joins
+`rails g migration CreateJoinTableRolesUsers roles users`
