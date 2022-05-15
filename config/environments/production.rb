@@ -3,6 +3,18 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.action_mailer.smtp_settings = {
+    address: ENV['ANTLEAF_ROBOT_SMTP_HOST'],
+    port: ENV['ANTLEAF_ROBOT_SMTP_PORT'],
+    domain: "antleaf.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV['ANTLEAF_ROBOT_SMTP_USERNAME'],
+    password: ENV['ANTLEAF_ROBOT_SMTP_PASSWORD']
+  }
+
+  config.action_mailer.default_url_options = { :host => 'doapr.antleaf.com' }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
