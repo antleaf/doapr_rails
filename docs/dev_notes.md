@@ -55,6 +55,7 @@ Added `passwordless.rb`
 Notes from: https://blog.eq8.eu/til/how-to-use-bootstrap-5-in-rails-7.html
 ```bash
 bin/importmap pin bootstrap
+bin/importmap pin datatables
 ```
 
 In Gemfile:

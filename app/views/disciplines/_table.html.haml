@@ -1,10 +1,10 @@
-%table{:class=>"table table-condensed table-striped sorted-table"}
+%table{:class=>"sorted-table table table-condensed table-striped"}
   %thead
     %tr
       %th Name
       - if (policy(Discipline).edit?)|(policy(Discipline).destroy?)
         %th.actions Actions
-    %tbody
+  %tbody
     - discipline_list.each do |discipline|
       %tr
         %td.no-wrap
@@ -13,6 +13,6 @@
         - if (policy(Discipline).edit?)|(policy(Discipline).destroy?)
           %td.actions
             - if policy(Discipline).edit?
-              = link_to 'Edit', edit_discipline_path(discipline), :class => "btn btn-info btn-xs"
+              = link_to 'Edit', edit_discipline_path(discipline), :class => "btn btn-info btn-sm"
             - if policy(Discipline).destroy?# && controller.controller_name == "technologies"
-              = link_to 'Delete', discipline, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-xs"
+              = link_to 'Delete', discipline, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-sm"
