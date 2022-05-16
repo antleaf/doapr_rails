@@ -6,11 +6,19 @@
         - @discipline.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :slug
-    = f.text_field :slug
+  %table.invisible-layout-table
+    %tr
+      %td.field-name
+        Name:
+      %td.field-value
+        = f.text_field :name
+    -#%tr
+    -#  %td.field-name
+    -#    Editors' Comments:
+    -#    %br
+    -#    %i (not displayed to users)
+    -#  %td.field-value
+    -#    = f.text_area :editorial, :rows => 10, :class => 'editorial-comment-field'
   .actions
-    = f.submit 'Save'
+    = link_to 'Cancel', @discipline, :class => "btn btn-danger btn-sm"
+    = f.submit 'Save', :class => 'btn btn-success btn-sm'

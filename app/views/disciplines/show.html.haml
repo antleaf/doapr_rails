@@ -1,12 +1,24 @@
-%p#notice= notice
+-#%p#notice= notice
+-#
+-#%p
+-#  %b Name:
+-#  = @discipline.name
+-#%p
+-#  %b Slug:
+-#  = @discipline.slug
+-#
+-#= link_to 'Edit', edit_discipline_path(@discipline)
+-#\|
+-#= link_to 'Back', disciplines_path
 
-%p
-  %b Name:
-  = @discipline.name
-%p
-  %b Slug:
-  = @discipline.slug
 
-= link_to 'Edit', edit_discipline_path(@discipline)
-\|
-= link_to 'Back', disciplines_path
+
+%h4.page-title
+  = "Discipline: #{@discipline.name}"
+- if policy(Discipline).edit?
+  = link_to 'Edit', edit_discipline_path(@discipline), :class => "btn btn-info btn-sm"
+%br
+%br
+%h5 Repositories supporting this discipline
+
+-# = render(:partial => 'repositories/table',:locals => {:repository_list => @discipline.repositories})
