@@ -1,0 +1,12 @@
+ID,Name,Description,Source Code,Software License,Editorial Notes
+atypon_literatum,Atypon/Literatum,,n/a,,
+custom_peerj_preprints_software,Custom PeerJ Preprints software,,n/a,,
+custom_software,Custom Software,,n/a,,
+digital_commons,Digital Commons,,n/a,,
+dspace,Dspace,,https://wiki.lyrasis.org/display/DSDOC7x/Installing+DSpace,BSD 3.0,
+eprints,Eprints,,http://files.eprints.org/2551/,LGPL 3.0,
+figshare_digital_science_preprint_framework,Figshare (Digital Science) preprint framework,,n/a,,
+highwire_preprint_and_benchpress,Highwire Preprint & BenchPress,,n/a,,
+invenio,Invenio,,https://inveniosoftware.org,MIT,
+open_preprints_system,Open Preprints System,,https://pkp.sfu.ca/ops/,GPL 3.0,
+open_science_framework,Open Science Framework,,https://github.com/centerforopenscience,Apache 2.0,

@@ -1,0 +1,508 @@
+Repository ID,Feature ID,Description,Editorial Notes
+agrirxiv,writing,Links to author services and support resources.,
+research_square,writing,AJE,
+researchgate,writing,AJE,
+osf_preprints,writing,Preprint editor,
+outbreak_rapid_science_prereview,writing,Preprint editor,
+wikijournal_preprints,writing,VisualEditor,
+arxiv,text_mining,Bulk access to full text corpus available through Kaggle and S3. Conditions for use based on licenses applied to individual works within the corpus. https://arxiv.org/help/bulk_data,
+agrirxiv,text_mining,,
+aas_open_research,text_mining,,
+amrc_open_research,text_mining,,
+biohackrxiv,text_mining,,
+cogprints,text_mining,,
+core_repository,text_mining,,
+corporate_governance_network,text_mining,,
+crimrriv,text_mining,,
+crossasia_repository,text_mining,,
+dspace_at_mit,text_mining,,
+earth_prints_repository,text_mining,,
+econstor,text_mining,,
+essoar,text_mining,,
+gates_open_research,text_mining,,
+hrb_open_research,text_mining,,
+icrisat,text_mining,,
+mni_open_research,text_mining,,
+nature_precedings,text_mining,,
+nber_working_papers,text_mining,,
+open_research_europe,text_mining,,
+organic_eprints,text_mining,,
+orvium,text_mining,,
+scielo_preprints,text_mining,,
+zenodo,text_mining,,
+f1000_research,text_mining,,
+wellcome_open_research,text_mining,,
+techrxiv,text_mining,"By posting in TechRxiv, authors explicitly consent to text mining",
+chemrxiv,text_mining,ChemRxiv does allow metadata mining and allows all associated files to be downloaded. Interested users should refer to the Open API documentation.,
+open_anthropology_research_repository,text_mining,"OARR does allow text and metadata mining, it supports and participates in the Open Archives Initiative (OAI) and it is a registered Open Archive Initiative Protocol for Metadata (OAI-PMH) data-provider.",
+medrxiv,text_mining,XML is available for text mining purposes.,
+biorxiv,text_mining,bioRxiv provides free and unrestricted access to all articles posted on the server. We believe this should apply not only to human readers but also to machine analysis of the content. A growing variety of resources have been created to facilitate this access.,
+marxiv,text_mining,Yes from Zenodo,
+research_square,text_mining,Yes via HMTL,
+researchgate,text_mining,Yes via HMTL,
+hal,text_mining,"Yes, but it should not be for commercial use",
+horizon__ird_scientific_publications,text_mining,"Yes, but it should not be for commercial use",
+authorea,text_mining,"Yes, consent to allow text and data mining of Your Content",
+beilstein_archive,text_mining,"Yes, consent to allow text and data mining of Your Content",
+apsa_preprints,text_mining,"Yes, this is permitted. Information in our Terms of Use.",
+osf_preprints,search_engine,Advanced research,
+outbreak_rapid_science_prereview,search_engine,Advanced research,
+biorxiv,search_engine,Advanced Research and Alerts/RSS,
+hal,search_engine,"Advanced research, RSS, alerts",
+horizon__ird_scientific_publications,search_engine,"Advanced research, RSS, alerts",
+arxiv,search_engine,Advanced Search,
+bepress_legal_repository,search_engine,Advanced Search,
+cern_document_server,search_engine,Advanced Search,
+chinaxiv,search_engine,Advanced Search,
+classics_research_network,search_engine,Advanced Search,
+crossasia_repository,search_engine,Advanced Search,
+cryptology_eprint_archive,search_engine,Advanced Search,
+dspace_at_mit,search_engine,Advanced Search,
+e_lis,search_engine,Advanced Search,
+earth_prints_repository,search_engine,Advanced Search,
+essoar,search_engine,Advanced Search,
+lse_research_online,search_engine,Advanced Search,
+marine_institute_open_access_repository,search_engine,Advanced Search,
+medrxiv,search_engine,Advanced Search,
+open_anthropology_research_repository,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+organic_eprints,search_engine,Advanced Search,
+orvium,search_engine,Advanced Search,
+philsci_archive,search_engine,Advanced Search,
+preprints_org,search_engine,Simple Search or Search by subjects or Authors,
+rinarxiv,search_engine,Advanced Search,
+rutgers_optimality_archive,search_engine,Advanced Search,
+figshare,search_engine,Advanced search available,
+agecon_search,search_engine,"Advanced Search, Alerts, Baskets, RSS (all integrated into the platform)",
+ssrn,search_engine,Browse papers by Network & Subject Area or Advanced Research,
+authorea,search_engine,By Tags only,
+beilstein_archive,search_engine,"Advanced Search (see Search Tips); RSS, Alerts - all integrated into the platform",
+zenodo,search_engine,https://help.zenodo.org/guides/search/,
+cell_press_sneak_peek,search_engine,Search by category (Subjects) or Simple Search,
+preprints_with_the_lancet,search_engine,Simple Search or Search by subjects or Authors,
+ssoar,search_engine,Search by filter,
+chemrxiv,search_engine,Search by filter only,
+munich_personal_repec_archive,search_engine,Search by items,
+socarxiv,search_engine,Search by subject,
+sodha,search_engine,Search by subject,
+cogprints,search_engine,"Search by Subjects, Year or Simple Search",
+core_repository,search_engine,"Search by Subjects, Year or Simple Search",
+corporate_governance_network,search_engine,"Search by Subjects, Year or Simple Search",
+crimrriv,search_engine,"Search by Subjects, Year or Simple Search",
+vixra,search_engine,Search engine powered by Google,
+art_dok,search_engine,Search engine powered by Google or Advanced Search (http://archiv.ub.uni-heidelberg.de/artdok/cgi/search/advanced),
+propylaeumdok,search_engine,Search Engine powered by Propylaeum,
+agrirxiv,search_engine,"Search or by filters (Topics, Organism descriptor, Broader Terms, Year, Author, Geographical location and Language)",
+mitofit_preprints_archive,search_engine,Simple Search,
+nature_precedings,search_engine,Simple Search,
+nber_working_papers,search_engine,Simple Search,
+research_square,search_engine,Simple search,
+researchgate,search_engine,Simple search,
+mathematical_physics_preprint_archive,search_engine,Simple search by keywords,
+therapoid,search_engine,Simple Search only,
+eric,search_engine,Simple Search or Advanced search via tips : https://eric.ed.gov/?advanced. There is also a thesaurus to help searching,
+apsa_preprints,search_engine,Simple Search or Browse by category. Plus indexing in Google Scholar.,
+econstor,search_engine,Simple Search or by categories (subject),
+scielo_preprints,search_engine,Simple search or by discipline (Areas of Knowledge),
+arpha_preprints,search_engine,"Simple Search or by filter (Journal, Posted date, Funding Agency)",
+marxiv,search_engine,"Simple Search or by filters (Access Right, File Type, Keywords, Type)",
+science_open,search_engine,"Simple Search or by filters (Open Access, Preprint, Latest version, Title, Author, Affiliation, ID, Publication date range, Publication date, Publisher name, Journal name, Keyword, Discipline, Collection, Abstract, Content type, Source, Validation, Record completeness, Indexed on ScienceOpen)",
+self_journal_of_science_co_science,search_engine,"Simple Search or by filters (Open Access, Preprint, Latest version, Title, Author, Affiliation, ID, Publication date range, Publication date, Publisher name, Journal name, Keyword, Discipline, Collection, Abstract, Content type, Source, Validation, Record completeness, Indexed on ScienceOpen)",
+semantic_web_journal,search_engine,"Simple Search or by filters (Open Access, Preprint, Latest version, Title, Author, Affiliation, ID, Publication date range, Publication date, Publisher name, Journal name, Keyword, Discipline, Collection, Abstract, Content type, Source, Validation, Record completeness, Indexed on ScienceOpen)",
+peerj_preprints,search_engine,Simple Search or by filters (subject or date of deposit),
+engrxiv,search_engine,Simple Search or by filters (subject or Licence),
+ina_rxiv,search_engine,Simple Search or by filters (subject or Licence),
+advance_sage_preprint,search_engine,Simple Search or by filters (subject),
+africarxiv,search_engine,Simple Search or by filters (subject),
+arabixiv,search_engine,Simple Search or by filters (subject),
+biohackrxiv,search_engine,Simple Search or by filters (subject),
+bodoarxiv,search_engine,Simple Search or by filters (subject),
+ecsarxiv,search_engine,Simple Search or by filters (subject),
+edarxiv,search_engine,Simple Search or by filters (subject),
+egusphere,search_engine,Simple Search or by filters (subject),
+electronic_colloquium_on_computational_complexity,search_engine,Simple Search or by filters (subject),
+english_and_american_literature_research_network,search_engine,Simple Search or by filters (subject),
+focus_archive,search_engine,Simple Search or by filters (subject),
+frenxiv,search_engine,Simple Search or by filters (subject),
+indiarxiv,search_engine,Simple Search or by filters (subject),
+lis_scholarship_archive,search_engine,Simple Search or by filters (subject),
+mediarxiv,search_engine,Simple Search or by filters (subject),
+metaarxiv,search_engine,Simple Search or by filters (subject),
+mindrxiv,search_engine,Simple Search or by filters (subject),
+nutrixiv,search_engine,Simple Search or by filters (subject),
+sportrxiv,search_engine,Simple Search or by filters (subject),
+techrxiv,search_engine,Simple Search or by filters (subject),
+jmir_preprints,search_engine,Simple Search or Search by criterias,
+lawarxiv,search_engine,Simple Search or Search by criterias,
+aas_open_research,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+amrc_open_research,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+f1000_research,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+gates_open_research,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+hrb_open_research,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+icrisat,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+mni_open_research,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+open_research_europe,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+wellcome_open_research,search_engine,"Simple Search or Search by filter (Subject Area, Article type(s), Study type(s), Year(s) of publication, Article Funding Bodies)",
+preprints_ru,search_engine,Simple Search or Search by subjects or Authors,
+dash,search_engine,"Yes, thanks to filter or by : Communities & Collections, Issue Date, Author, Title, Keywords, FAS Department",
+eartharxiv,search_engine,"You can search by: Title, Keywords, Author Name, Author Affiliation",
+arpha_preprints,bibliographic_references_management,"RIS, BibTeX, Bookends, EasyBib, EndNote (tagged), EndNote 8 (xml), Medlars, Mendeley, Papers, RefWorks Tagged, Ref Manager, Zotero, Mods (xml) and Plain text (txt)",
+cogprints,bibliographic_references_management,"ASCII Citation, Atom, BibTeX, Dublin Core, EP3 XML, EPrints Application Profile (experimental), EndNote, HTML Citation, ID Plus Text Citation, JSON, METS, MODS, MPEG-21 DIDL, OpenURL ContextObject, OpenURL ContextObject in Span, RDF+N-Triples, RDF+N3, RDF+XML, Refer, Reference Manager, Search Data Dump, Simple Metadata, YAML",
+core_repository,bibliographic_references_management,"ASCII Citation, Atom, BibTeX, Dublin Core, EP3 XML, EPrints Application Profile (experimental), EndNote, HTML Citation, ID Plus Text Citation, JSON, METS, MODS, MPEG-21 DIDL, OpenURL ContextObject, OpenURL ContextObject in Span, RDF+N-Triples, RDF+N3, RDF+XML, Refer, Reference Manager, Search Data Dump, Simple Metadata, YAML",
+corporate_governance_network,bibliographic_references_management,"ASCII Citation, Atom, BibTeX, Dublin Core, EP3 XML, EPrints Application Profile (experimental), EndNote, HTML Citation, ID Plus Text Citation, JSON, METS, MODS, MPEG-21 DIDL, OpenURL ContextObject, OpenURL ContextObject in Span, RDF+N-Triples, RDF+N3, RDF+XML, Refer, Reference Manager, Search Data Dump, Simple Metadata, YAML",
+crimrriv,bibliographic_references_management,"ASCII Citation, Atom, BibTeX, Dublin Core, EP3 XML, EPrints Application Profile (experimental), EndNote, HTML Citation, ID Plus Text Citation, JSON, METS, MODS, MPEG-21 DIDL, OpenURL ContextObject, OpenURL ContextObject in Span, RDF+N-Triples, RDF+N3, RDF+XML, Refer, Reference Manager, Search Data Dump, Simple Metadata, YAML",
+preprints_org,bibliographic_references_management,"BibSonomy, Mendeley",
+econstor,bibliographic_references_management,BibTex,
+easychair_preprints,bibliographic_references_management,BibTeX,
+ecoevorxiv,bibliographic_references_management,BibTeX,
+ssoar,bibliographic_references_management,BibTex and Endnote,
+arxiv,bibliographic_references_management,BibTex and Mendely,
+biorxiv,bibliographic_references_management,"BibTeX, Bookends, EasyBib, EndNote (tagged), EndNote 8 (xml), Medlars, Mendeley, Papers, RefWorks Tagged,  Ref Manager, RIS, Zotero",
+medrxiv,bibliographic_references_management,"BibTeX, Bookends, EasyBib, EndNote (tagged), EndNote 8 (xml), Medlars, Mendeley, Papers, RefWorks Tagged,  Ref Manager, RIS, Zotero",
+zenodo,bibliographic_references_management,"BibTeX, CSL, DataCite, Dublin Core, DCAT, JSON, JSON-LD, GeoJSON, MARCXML and  Mendeley",
+marxiv,bibliographic_references_management,"BibTeX, CSL, DataCite, Dublin Core, DCAT, JSON, JSON-LD, GeoJSON, MARCXML and  Mendeley",
+science_open,bibliographic_references_management,"BibTeX, EndNote, Reference Manager (RIS)",
+self_journal_of_science_co_science,bibliographic_references_management,"BibTeX, EndNote, Reference Manager (RIS)",
+semantic_web_journal,bibliographic_references_management,"BibTeX, EndNote, Reference Manager (RIS)",
+cern_document_server,bibliographic_references_management,"BibTeX, MARC, MARCXML, DC, EndNote, NLM and RefWorks",
+agecon_search,bibliographic_references_management,"BibTeX, MARC, MARCXML, DublinCore, EndNote, NLM, RefWorks and RIS",
+essoar,bibliographic_references_management,"BibTex, RIS (ProCite, Reference Manager), EndNote, RefWorks",
+hal,bibliographic_references_management,"BibTeX, TEI, DC, Dcterms and EndNote",
+horizon__ird_scientific_publications,bibliographic_references_management,"BibTeX, TEI, DC, Dcterms and EndNote",
+philsci_archive,bibliographic_references_management,"EndNote, BibTeX, Dublin Core, ASCII/Text Citation (Chicago), HTML Citation and OpenURL",
+vixra,bibliographic_references_management,Mendeley,
+f1000_research,bibliographic_references_management,"Mendeley, Sciwheel,  EndNote,  Ref. Manager, Bibtex, ProCite, Sente",
+wellcome_open_research,bibliographic_references_management,"Mendeley, Sciwheel,  EndNote,  Ref. Manager, Bibtex, ProCite, Sente",
+cryptology_eprint_archive,bibliographic_references_management,PDF and BibTeX Citation,
+earth_prints_repository,bibliographic_references_management,"Refman, EndNote, Bibtex, RefWorks, Wikipedia, Excel, CSV and PDF",
+figshare,bibliographic_references_management,"RefWorks, BibTex, Ref. manager, Endnote, DataCite, NLM, DC",
+advance_sage_preprint,bibliographic_references_management,"RefWorks, BibTex, Ref. manager, Endnote, DataCite, NLM, DC",
+techrxiv,bibliographic_references_management,"RefWorks, BibTex, Ref. manager, Endnote, DataCite, NLM, DC",
+open_anthropology_research_repository,bibliographic_references_management,"RIS (ProCite, Reference Manager), EndNote, BibTeX, Medlars and RefWorks",
+aas_open_research,bibliographic_references_management,"Sciwheel, EndNote, Ref. Manager, Bibtex, ProCite and Sente",
+amrc_open_research,bibliographic_references_management,"Sciwheel, EndNote, Ref. Manager, Bibtex, ProCite and Sente",
+gates_open_research,bibliographic_references_management,"Sciwheel, EndNote, Ref. Manager, Bibtex, ProCite and Sente",
+hrb_open_research,bibliographic_references_management,"Sciwheel, EndNote, Ref. Manager, Bibtex, ProCite and Sente",
+icrisat,bibliographic_references_management,"Sciwheel, EndNote, Ref. Manager, Bibtex, ProCite and Sente",
+mni_open_research,bibliographic_references_management,"Sciwheel, EndNote, Ref. Manager, Bibtex, ProCite and Sente",
+open_research_europe,bibliographic_references_management,"Sciwheel, EndNote, Ref. Manager, Bibtex, ProCite and Sente",
+preprints_with_the_lancet,usage_metrics,"Abstract view, Downloads are visible to everyone",
+nature_precedings,usage_metrics,Accesses and Citations are visible to everyone,
+nber_working_papers,usage_metrics,Accesses and Citations are visible to everyone,
+dspace_at_mit,usage_metrics,"Downloads (by month and all time usage), Views, (by month and all time usage), Top Countries views and dowloads. Accessible with graphs. Those are visible to everyone",
+organic_eprints,usage_metrics,Downloads and Hits are visible to everyone,
+orvium,usage_metrics,Downloads and Hits are visible to everyone,
+agrirxiv,usage_metrics,Downloads and other analytics,
+eric,usage_metrics,Downloads and views,
+scielo_preprints,usage_metrics,Downloads and views are available to everyone,
+cell_press_sneak_peek,usage_metrics,Downloads and Views are visible to everyone,
+earth_prints_repository,usage_metrics,Downloads and Views are visible to everyone,
+marxiv,usage_metrics,Downloads and visits are visble to everyone.,
+bepress_legal_repository,usage_metrics,Downloads are visible to author(s) only,
+crossasia_repository,usage_metrics,Downloads are visible to everyone,
+lse_research_online,usage_metrics,Downloads are visible to everyone,
+marine_institute_open_access_repository,usage_metrics,Downloads are visible to everyone,
+socarxiv,usage_metrics,Downloads are visible to everyone,
+sodha,usage_metrics,Downloads are visible to everyone,
+art_dok,usage_metrics,Downloads are visible to everyone,
+propylaeumdok,usage_metrics,Downloads are visible to everyone,
+engrxiv,usage_metrics,Downloads are visible to everyone,
+ina_rxiv,usage_metrics,Downloads are visible to everyone,
+africarxiv,usage_metrics,Downloads are visible to everyone,
+arabixiv,usage_metrics,Downloads are visible to everyone,
+biohackrxiv,usage_metrics,Downloads are visible to everyone,
+bodoarxiv,usage_metrics,Downloads are visible to everyone,
+ecsarxiv,usage_metrics,Downloads are visible to everyone,
+edarxiv,usage_metrics,Downloads are visible to everyone,
+egusphere,usage_metrics,Downloads are visible to everyone,
+electronic_colloquium_on_computational_complexity,usage_metrics,Downloads are visible to everyone,
+english_and_american_literature_research_network,usage_metrics,Downloads are visible to everyone,
+focus_archive,usage_metrics,Downloads are visible to everyone,
+frenxiv,usage_metrics,Downloads are visible to everyone,
+indiarxiv,usage_metrics,Downloads are visible to everyone,
+lis_scholarship_archive,usage_metrics,Downloads are visible to everyone,
+mediarxiv,usage_metrics,Downloads are visible to everyone,
+metaarxiv,usage_metrics,Downloads are visible to everyone,
+mindrxiv,usage_metrics,Downloads are visible to everyone,
+nutrixiv,usage_metrics,Downloads are visible to everyone,
+sportrxiv,usage_metrics,Downloads are visible to everyone,
+eartharxiv,usage_metrics,Downloads are visible to everyone,
+psyarxiv,usage_metrics,Downloads are visible to everyone,
+qeios,usage_metrics,Downloads are visible to everyone,
+repec,usage_metrics,Downloads are visible to everyone,
+econstor,usage_metrics,Downloads are visible to everyone,
+agecon_search,usage_metrics,Downloads are visible to everyone,
+open_anthropology_research_repository,usage_metrics,Downloads are visible to everyone,
+e_lis,usage_metrics,Downloads per month over past year are available to everyone,
+essoar,usage_metrics,"Downloads, View and Citations are visible to everyone",
+figshare,usage_metrics,"Downloads, Views and Citations are visible to everyone",
+advance_sage_preprint,usage_metrics,"Downloads, Views and Citations are visible to everyone",
+techrxiv,usage_metrics,"Downloads, Views and Citations are visible to everyone",
+f1000_research,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+wellcome_open_research,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+aas_open_research,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+amrc_open_research,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+gates_open_research,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+hrb_open_research,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+icrisat,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+mni_open_research,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+open_research_europe,usage_metrics,"Downloads, Views and Google Scholars Citations are visible to everyone",
+peerj_preprints,usage_metrics,"Downloads, Views and Visitors are visible to everyone",
+lingbuzz,usage_metrics,"Downloads, Views are visible to everyone",
+osf_preprints,usage_metrics,Endorsement score on author profile page and Downloads visible to everyone,
+outbreak_rapid_science_prereview,usage_metrics,Endorsement score on author profile page and Downloads visible to everyone,
+paleorxiv,usage_metrics,Endorsement score on author profile page and Downloads visible to everyone,
+pci,usage_metrics,Endorsement score on author profile page and Downloads visible to everyone,
+philsci_archive,usage_metrics,Monthly Views for the past 3 years and Monthly Downloads for the past 3 years are visible to everyone,
+hal,usage_metrics,"Number of views of the record and the number of downloads of the file in a widget called Metrics. Metrics are available for :  author, depositor, structure, collection, portal",
+horizon__ird_scientific_publications,usage_metrics,"Number of views of the record and the number of downloads of the file in a widget called Metrics. Metrics are available for :  author, depositor, structure, collection, portal",
+ssrn,usage_metrics,Paper Statistics are captured on every Abstract Page. Metrics include usage data (article views and downloads) and other article-level metrics (Citations). Those are visible to everyone,
+jmir_preprints,usage_metrics,Social media interactions are visible to everyone,
+lawarxiv,usage_metrics,Social media interactions are visible to everyone,
+zenodo,usage_metrics,"Statistics can be requested by the owner of a record or community, downloads per country is also available",
+dash,usage_metrics,"View and Downloads (Last 7 days, Last 30 days and All time statistics) are visible to everyone",
+arpha_preprints,usage_metrics,Views and citation counts are visible to everyone,
+ssoar,usage_metrics,Views and Downloads are visible to everyone,
+preprints_ru,usage_metrics,Views are visible to everyone,
+vixra,usage_metrics,Views are visible to everyone,
+chinaxiv,usage_metrics,"Views, Downloads and Hits are visible to everyone",
+classics_research_network,usage_metrics,"Views, Downloads and Hits are visible to everyone",
+chemrxiv,usage_metrics,"Views, Downloads, Altmetrics visible to everyone",
+research_square,usage_metrics,"Views, Downloads, Altmetrics, Comments, Citations are visible to everyone",
+researchgate,usage_metrics,"Views, Downloads, Altmetrics, Comments, Citations are visible to everyone",
+preprints_org,usage_metrics,"Views, Downloads, Altmetrics, Number of comments are visible to everyone",
+biorxiv,usage_metrics,"Views, Downloads, Altmetrics, Social media interactions (from individual platforms not Altmetric), Number of comments (Disqus; Hypothesis if loaded). Those are visible to everyone",
+medrxiv,usage_metrics,"Views, Downloads, Altmetrics, Social media interactions (from individual platforms not Altmetric), Number of comments (Disqus; Hypothesis if loaded). Those are visible to everyone",
+authorea,usage_metrics,"Views, Downloads, Social media interactions (from individual platforms not Altmetric) visible to everyone",
+beilstein_archive,usage_metrics,"Views, Downloads, Social media interactions (from individual platforms not Altmetric) visible to everyone",
+science_open,usage_metrics,"Views, References, Citations, Reviews, Comments and Shares are visible to everyone",
+self_journal_of_science_co_science,usage_metrics,"Views, References, Citations, Reviews, Comments and Shares are visible to everyone",
+semantic_web_journal,usage_metrics,"Views, References, Citations, Reviews, Comments and Shares are visible to everyone",
+arxiv,usage_metrics,Yes but only for the platform and not for the preprint only. Those metrics are visible to everyone,
+econstor,indexing,,
+osf_preprints,revision,,
+outbreak_rapid_science_prereview,revision,,
+f1000_research,revision,Articles are published first and peer reviewed after publication by invited referees. The peer reviewer's names and comments are visible on the site.,
+wellcome_open_research,revision,Articles are published first and peer reviewed after publication by invited referees. The peer reviewer's names and comments are visible on the site.,
+cell_press_sneak_peek,revision,"As the preprints are then posted in the publisher's journals, the peer review is done by the",
+wikijournal_preprints,revision,"As the preprints are then posted in the publisher's journals, the peer review is done by the platform",
+peerj_preprints,revision,"As the preprints are then posted in the publisher's journals, the peer review is done by the platform",
+arpha_preprints,revision,"As the preprints are then posted in the publisher's journals, the peer review is done by the platform",
+preprints_with_the_lancet,revision,"As the preprints are then posted in the publisher's journals, the peer review is done by the platform",
+nature_precedings,revision,"As the preprints can be posted in the organisation's journals, the peer review is done by the platform",
+nber_working_papers,revision,"As the preprints can be posted in the organisation's journals, the peer review is done by the platform",
+scielo_preprints,revision,"As the preprints can be posted in the publisher's journals, the peer review is done by the platform",
+aas_open_research,revision,"Peer review of articles published in AAS Open Research takes place after publication; once the article is published, expert reviewers are formally invited to review. The peer review is administered on behalf of the authors by the editorial team, and authors are asked not to contact the reviewers directly.",
+amrc_open_research,revision,"Peer review of articles published in AMRC Open Research takes place after publication; once the article is published, expert reviewers are formally invited to review. The peer review is administered on behalf of the authors by the editorial team, and authors are asked not to contact the reviewers directly.",
+gates_open_research,revision,"Peer review of articles published in Gates Open Research takes place after publication; once the article is published, expert reviewers are formally invited to review. The peer review is administered on behalf of the authors by the editorial team, and authors are asked not to contact the reviewers directly.",
+hrb_open_research,revision,"Peer review of articles published in HRB Open Research takes place after publication; once the article is published, expert reviewers are formally invited to review. The peer review is administered on behalf of the authors by the editorial team, and authors are asked not to contact the reviewers directly.",
+icrisat,revision,"Peer review of articles published in HRB Open Research takes place after publication; once the article is published, expert reviewers are formally invited to review. The peer review is administered on behalf of the authors by the editorial team, and authors are asked not to contact the reviewers directly.",
+mni_open_research,revision,"Peer review of articles published in MNI Open Research takes place after publication; once the article is published, expert reviewers are formally invited to review. The peer review is administered on behalf of the authors by the editorial team, and authors are asked not to contact the reviewers directly.",
+open_research_europe,revision,"Peer review of articles published in Open Research Europe takes place after publication; once the article is published, expert reviewers are formally invited to review. The peer review is administered on behalf of the authors by the editorial team, and authors are asked not to contact the reviewers directly.",
+science_open,revision,"You can then use the ScienceOpen platform to invite peers as potential reviewers. Submitted reviews will be openly displayed on ScienceOpen together with your work. According to the recommendations of the reviewers you may modify your work and submit a second, revised version, if required.",
+self_journal_of_science_co_science,revision,"You can then use the ScienceOpen platform to invite peers as potential reviewers. Submitted reviews will be openly displayed on ScienceOpen together with your work. According to the recommendations of the reviewers you may modify your work and submit a second, revised version, if required.",
+semantic_web_journal,revision,"You can then use the ScienceOpen platform to invite peers as potential reviewers. Submitted reviews will be openly displayed on ScienceOpen together with your work. According to the recommendations of the reviewers you may modify your work and submit a second, revised version, if required.",
+advance_sage_preprint,revision,You can transfer your paper for publication in SAGE journals,
+jmir_preprints,revision,"Yes via Open Peer review : Submissions are open for anybody to peer-review. Once two peer-review reports of reasonable quality have been received, we will send these peer-review reports to the author, and may offer transfer to a partner journal, which has its own editor or editorial board.",
+lawarxiv,revision,"Yes via Open Peer review : Submissions are open for anybody to peer-review. Once two peer-review reports of reasonable quality have been received, we will send these peer-review reports to the author, and may offer transfer to a partner journal, which has its own editor or editorial board.",
+vixra,revision,"Yes, you can ask for peer review on the forum",
+agrirxiv,peer review,Links provided to journals including support in finding a journal and its stated preprint policy.,
+preprints_org,commenting,Commenting (including annotation plug-ins),
+arxiv,commenting,Commenting (including annotation plug-ins),
+paleorxiv,commenting,Commenting (including annotation plug-ins),
+pci,commenting,Commenting (including annotation plug-ins),
+essoar,commenting,Commenting (including annotation plug-ins),
+psyarxiv,commenting,Commenting (including annotation plug-ins),
+qeios,commenting,Commenting (including annotation plug-ins),
+repec,commenting,Commenting (including annotation plug-ins),
+arpha_preprints,commenting,Post-publication comments,
+osf_preprints,commenting,,
+outbreak_rapid_science_prereview,commenting,,
+cell_press_sneak_peek,commenting,Any registered Mendeley user can comment on a paper posted in Sneak Peek,
+agrirxiv,commenting,Commenting (including annotation plug-ins),
+metaarxiv,commenting,Commenting (including annotation plug-ins),
+africarxiv,commenting,Commenting (including annotation plug-ins),
+edarxiv,commenting,Commenting (including annotation plug-ins),
+egusphere,commenting,Commenting (including annotation plug-ins),
+electronic_colloquium_on_computational_complexity,commenting,Commenting (including annotation plug-ins),
+english_and_american_literature_research_network,commenting,Commenting (including annotation plug-ins),
+mediarxiv,commenting,Commenting (including annotation plug-ins),
+philsci_archive,commenting,Commenting (including annotation plug-ins),
+mitofit_preprints_archive,commenting,Commenting (including annotation plug-ins),
+research_square,commenting,Commenting (including annotation plug-ins),
+researchgate,commenting,Commenting (including annotation plug-ins),
+engrxiv,commenting,Commenting (including annotation plug-ins),
+arabixiv,commenting,Commenting (including annotation plug-ins),
+biohackrxiv,commenting,Commenting (including annotation plug-ins),
+bodoarxiv,commenting,Commenting (including annotation plug-ins),
+ecsarxiv,commenting,Commenting (including annotation plug-ins),
+frenxiv,commenting,Commenting (including annotation plug-ins),
+indiarxiv,commenting,Commenting (including annotation plug-ins),
+lis_scholarship_archive,commenting,Commenting (including annotation plug-ins),
+mindrxiv,commenting,Commenting (including annotation plug-ins),
+nutrixiv,commenting,Commenting (including annotation plug-ins),
+sportrxiv,commenting,Commenting (including annotation plug-ins),
+chinaxiv,commenting,Commenting (including annotation plug-ins),
+classics_research_network,commenting,Commenting (including annotation plug-ins),
+ina_rxiv,commenting,Commenting (including annotation plug-ins),
+therapoid,commenting,Commenting (including annotation plug-ins),
+f1000_research,commenting,Commenting (including annotation plug-ins),
+wellcome_open_research,commenting,Commenting (including annotation plug-ins),
+peerj_preprints,commenting,Commenting (including annotation plug-ins),
+preprints_with_the_lancet,commenting,Commenting (including annotation plug-ins),
+aas_open_research,commenting,Commenting (including annotation plug-ins),
+amrc_open_research,commenting,Commenting (including annotation plug-ins),
+gates_open_research,commenting,Commenting (including annotation plug-ins),
+hrb_open_research,commenting,Commenting (including annotation plug-ins),
+icrisat,commenting,Commenting (including annotation plug-ins),
+mni_open_research,commenting,Commenting (including annotation plug-ins),
+open_research_europe,commenting,Commenting (including annotation plug-ins),
+jmir_preprints,commenting,Commenting (including annotation plug-ins),
+lawarxiv,commenting,Commenting (including annotation plug-ins),
+vixra,commenting,Commenting (including annotation plug-ins),
+medrxiv,commenting,"Commenting (including annotation plug-ins), Disqus",
+preprints_ru,commenting,"Commenting (including annotation plug-ins), Disqus",
+apsa_preprints,commenting,"Commenting (including annotation plug-ins). Free, requires registration",
+wikijournal_preprints,commenting,Commenting (Open Peer review process),
+science_open,commenting,Commenting (Open Peer review process),
+self_journal_of_science_co_science,commenting,Commenting (Open Peer review process),
+semantic_web_journal,commenting,Commenting (Open Peer review process),
+lse_research_online,commenting,Commenting available on the web site,
+marine_institute_open_access_repository,commenting,Commenting available on the web site,
+munich_personal_repec_archive,commenting,Commenting available on the web site,
+cern_document_server,commenting,Commenting available on the web site,
+authorea,commenting,Comments. Discuss your preprints with your collaborators and the scientific community,
+beilstein_archive,commenting,Comments. Discuss your preprints with your collaborators and the scientific community,
+nature_precedings,commenting,Informal peer review was available through a commenting system on the Nature Precedings website,
+nber_working_papers,commenting,Informal peer review was available through a commenting system on the Nature Precedings website,
+figshare,commenting,You just need an account to comment a preprint,
+advance_sage_preprint,commenting,you just need an account to comment a preprint,
+biorxiv,commenting,"Yes, bioRxiv therefore includes an on-site commenting mechanism (powered by Disqus)",
+eartharxiv,commenting,Commenting,
+research_square,revision_follow_up,In Review Service,
+researchgate,revision_follow_up,In Review Service,
+jmir_preprints,revision_follow_up,On the website we can follow the worflow of the review of the article,
+lawarxiv,revision_follow_up,On the website we can follow the worflow of the review of the article,
+f1000_research,revision_follow_up,On the website we can follow the worflow of the review of the article,
+wellcome_open_research,revision_follow_up,On the website we can follow the worflow of the review of the article,
+aas_open_research,revision_follow_up,On the website we can follow the worflow of the review of the article,
+amrc_open_research,revision_follow_up,On the website we can follow the worflow of the review of the article,
+gates_open_research,revision_follow_up,On the website we can follow the worflow of the review of the article,
+hrb_open_research,revision_follow_up,On the website we can follow the worflow of the review of the article,
+icrisat,revision_follow_up,On the website we can follow the worflow of the review of the article,
+mni_open_research,revision_follow_up,On the website we can follow the worflow of the review of the article,
+open_research_europe,revision_follow_up,On the website we can follow the worflow of the review of the article,
+wikijournal_preprints,revision_follow_up,On the website we can follow the worflow of the review of the article,
+authorea,revision_follow_up,Under Review Process,
+beilstein_archive,revision_follow_up,Under Review Process,
+osf_preprints,revision_follow_up,,
+outbreak_rapid_science_prereview,revision_follow_up,,
+peerj_preprints,revision_follow_up,You can follow all the process of revision on the platform,
+preprints_org,endorsement,Approval system in the platform with 'likes',
+hal,endorsement,Episciences : overlay platform for journals,
+horizon__ird_scientific_publications,endorsement,Episciences : overlay platform for journals,
+ssrn,endorsement,Linked to Elsevier plateform,
+jmir_preprints,endorsement,Via Open Peer Review Process of the website,
+lawarxiv,endorsement,Via Open Peer Review Process of the website,
+aas_open_research,endorsement,Via Peer Review Process of the website,
+amrc_open_research,endorsement,Via Peer Review Process of the website,
+arpha_preprints,endorsement,Via Peer Review Process of the website,
+f1000_research,endorsement,Via Peer Review Process of the website,
+gates_open_research,endorsement,Via Peer Review Process of the website,
+hrb_open_research,endorsement,Via Peer Review Process of the website,
+icrisat,endorsement,Via Peer Review Process of the website,
+mni_open_research,endorsement,Via Peer Review Process of the website,
+open_research_europe,endorsement,Via Peer Review Process of the website,
+wellcome_open_research,endorsement,Via Peer Review Process of the website,
+wikijournal_preprints,endorsement,Via Peer Review Process of the website,
+research_square,endorsement,Via badges,
+researchgate,endorsement,Via badges,
+arxiv,endorsement,The endorsement system verifies that arXiv contributors belong to the scientific community in a fair and sustainable way that can scale with arXiv's future growth.,
+biorxiv,plagiarism_detection,During screening process BiorXiv uses Similarity Check software,
+therapoid,comms_social_networking,  Forum (https://therapoid.net/en/forums/) or Social media (https://twitter.com/OpenTherapeutic),
+eartharxiv,comms_social_networking,  https://twitter.com/EarthArXiv,
+e_lis,comms_social_networking,  https://twitter.com/EprintsELIS,
+wikijournal_preprints,comms_social_networking,  https://twitter.com/WikiJSci,
+dspace_at_mit,comms_social_networking,Alerts when a content is posted only.  ,
+eric,comms_social_networking,ERIC Helpdesk via email through the Contact Us link on the ERIC website or at ERICRequests@ed.gov. Communications on Facebook: https://www.facebook.com/SearchEduResources Communications on Twitter: https://twitter.com/ericinfo  https://twitter.com/ERICinfo,
+authorea,comms_social_networking,https://twitter.com/authorea  https://www.authorea.com/blog,
+beilstein_archive,comms_social_networking,https://twitter.com/authorea  https://www.authorea.com/blog,
+ssrn,comms_social_networking,"Paper's public abstract page select the share options located in the upper right hand corner of the page. Share your research directly to Facebook or Twitter by clicking on the appropriate icon. Another option is to email the document's url to a colleague. Curated eJournal Site Subscriptions. Conference Proceedings on SSRN, SSRN & Mendeley Data Integration  https://www.ssrn.com/index.cfm/en/subscribe/",
+hal,comms_social_networking,"Sharing features : Twitter, Facebook, Email, Linkedln and any communication tool  ",
+horizon__ird_scientific_publications,comms_social_networking,"Sharing features : Twitter, Facebook, Email, Linkedln and any communication tool  ",
+arxiv,comms_social_networking,"Sharing features via social media, helpdesk  https://blog.arxiv.org/",
+nature_precedings,comms_social_networking,Sharing link  ,
+nber_working_papers,comms_social_networking,Sharing link  ,
+osf_preprints,comms_social_networking,"Sharing via  social media (Facebook, Twitter and mail)  https://twitter.com/OSFramework",
+outbreak_rapid_science_prereview,comms_social_networking,"Sharing via  social media (Facebook, Twitter and mail)  https://twitter.com/OSFramework",
+paleorxiv,comms_social_networking,"Sharing via  social media (Facebook, Twitter and mail)  https://twitter.com/paleorxiv",
+pci,comms_social_networking,"Sharing via  social media (Facebook, Twitter and mail)  https://twitter.com/paleorxiv",
+biorxiv,comms_social_networking,Sharing via  social media (Twitter and mail)  https://twitter.com/biorxivpreprint,
+bepress_legal_repository,comms_social_networking,Sharing via mail  ,
+chinaxiv,comms_social_networking,Sharing via social media  ,
+classics_research_network,comms_social_networking,Sharing via social media  ,
+preprints_with_the_lancet,comms_social_networking,Sharing via social media  ,
+socarxiv,comms_social_networking,Sharing via social media  https://socopen.org/,
+sodha,comms_social_networking,Sharing via social media  https://socopen.org/,
+philsci_archive,comms_social_networking,Sharing via social media (Facebook and Twitter)  ,
+chemrxiv,comms_social_networking,"Sharing via social media (Facebook, Twitter, LinkedIn)  https://twitter.com/chemrxiv",
+vixra,comms_social_networking,Sharing via Social media (Twitter and Facebook) and blog   https://www.facebook.com/viXraorg-186033568941/,
+psyarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook and Instagram)  https://twitter.com/psyarxiv",
+qeios,comms_social_networking,"Sharing via social media (Twitter, Facebook and Instagram)  https://twitter.com/psyarxiv",
+repec,comms_social_networking,"Sharing via social media (Twitter, Facebook and Instagram)  https://twitter.com/psyarxiv",
+essoar,comms_social_networking,"Sharing via social media (Twitter, Facebook and mail)  ",
+cell_press_sneak_peek,comms_social_networking,"Sharing via social media (Twitter, Facebook and mail)  ",
+peerj_preprints,comms_social_networking,"Sharing via social media (Twitter, Facebook and mail)  https://peerj.com/",
+marxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook and mail)  https://twitter.com/MarXivPapers",
+propylaeumdok,comms_social_networking,"Sharing via social media (Twitter, Facebook and mail)  https://twitter.com/Propylaeum_FID",
+zenodo,comms_social_networking,"Sharing via social media (Twitter, Facebook and mail). Besides social media our blog (link below)  https://blog.zenodo.org/ and https://twitter.com/zenodo_org",
+econstor,comms_social_networking,"Sharing via social media (Twitter, Facebook and Reddit)  ",
+arabixiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  ",
+biohackrxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  ",
+bodoarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  ",
+engrxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  ",
+frenxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  ",
+ina_rxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  ",
+advance_sage_preprint,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  ",
+africarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/AfricArxiv",
+ecsarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/ecsarxiv",
+edarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/EdArXiv",
+egusphere,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/EdArXiv",
+electronic_colloquium_on_computational_complexity,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/EdArXiv",
+english_and_american_literature_research_network,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/EdArXiv",
+focus_archive,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/FUSFoundation or Youtube for conferences : https://www.youtube.com/user/FUSFoundation/videos",
+indiarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/indiarxiv",
+lis_scholarship_archive,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/lissArchive",
+mediarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/mediarxiv",
+mindrxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/MindRxiv",
+nutrixiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/NutriXiv",
+sportrxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/SportRxiv/",
+techrxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/TechRxiv_org",
+metaarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail)  https://twitter.com/UCBITSS",
+figshare,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and mail) and LinkedIn : https://www.linkedin.com/company/figshare/posts/?feedView=all  https://twitter.com/figshare",
+jmir_preprints,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and Pinterest)  ",
+lawarxiv,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and Pinterest)  ",
+open_anthropology_research_repository,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn and Reddit) or via QR Code  ",
+mni_open_research,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  ",
+scielo_preprints,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  ",
+aas_open_research,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  https://blog.aasopenresearch.org/",
+amrc_open_research,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  https://blog.amrcopenresearch.org/",
+gates_open_research,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  https://blog.gatesopenresearch.org/",
+hrb_open_research,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  https://blog.hrbopenresearch.org/",
+icrisat,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  https://blog.hrbopenresearch.org/",
+wellcome_open_research,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  https://blog.wellcomeopenresearch.org/",
+open_research_europe,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  https://open-research-europe.ec.europa.eu/blog",
+f1000_research,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit and mail)  https://twitter.com/F1000Research",
+arpha_preprints,comms_social_networking,"Sharing via social media (Twitter, Facebook, LinkedIn, Reddit, Mendeley and mail)  ",
+apsa_preprints,comms_social_networking,"Sharing via social media (Twitter, Facebook, Pinterest, Gmail, LinkedIn, Tumblr and Messenger)  https://twitter.com/APSA_Preprints",
+preprints_org,comms_social_networking,"Sharing via social media (Twitter, mail, Facebook, LinkedIn)  ",
+cern_document_server,comms_social_networking,"Sharing via social media (Twitter, mail, Facebook, LinkedIn)  ",
+medrxiv,comms_social_networking,"Sharing via social media (Twitter, mail, Facebook, LinkedIn). All new preprints are posted on Twitter  https://twitter.com/medrxivpreprint",
+ssoar,comms_social_networking,"Sharing via social media (Twitter, Reddit, Facebook and mail)  ",
+science_open,comms_social_networking,"Sharing via social media (Twitter, Sina Weibo, Facebook and mail)  https://blog.scienceopen.com/",
+self_journal_of_science_co_science,comms_social_networking,"Sharing via social media (Twitter, Sina Weibo, Facebook and mail)  https://blog.scienceopen.com/",
+semantic_web_journal,comms_social_networking,"Sharing via social media (Twitter, Sina Weibo, Facebook and mail)  https://blog.scienceopen.com/",
+dash,comms_social_networking,The link to the published version is present on the page. Also the link to the version submited to another preprint repository is mentioned   ,
+research_square,comms_social_networking,"Tweet of the posted content. There is always the implementation of the content/article highlighting. Sharing via Social Media (Twitter, Facebook, LinkedIn, Papers and mail)  https://www.researchsquare.com/researchers/promotion",
+researchgate,comms_social_networking,"Tweet of the posted content. There is always the implementation of the content/article highlighting. Sharing via Social Media (Twitter, Facebook, LinkedIn, Papers and mail)  https://www.researchsquare.com/researchers/promotion",
+agecon_search,comms_social_networking,"Twitter and Facebook and YouTube channel  Twitter (https://twitter.com/AgEconSearch) and Facebook (https://facebook.com/AgEconSearch) accounts, YouTube channel (https://www.youtube.com/user/AAEAonYT/videos)",
+agrirxiv,comms_social_networking,"Yes, all pages and preprints have share functionality for all social media platforms and email  https://twitter.com/agrirxiv",
