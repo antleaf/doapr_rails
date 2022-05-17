@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @country.name
+%p
+  %b Code:
+  = @country.code
+%p
+  %b Latitude:
+  = @country.latitude
+%p
+  %b Longitude:
+  = @country.longitude
+%p
+  %b Continent:
+  = @country.continent
+
+= link_to 'Edit', edit_country_path(@country)
+\|
+= link_to 'Back', countries_path

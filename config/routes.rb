@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :countries
+  resources :platforms
+  resources :statuses
+  resources :business_models
+  resources :repositories
   resources :disciplines
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

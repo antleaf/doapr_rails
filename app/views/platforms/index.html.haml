@@ -1,0 +1,29 @@
+%h1 Listing platforms
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Source code
+      %th Software license
+      %th Slug
+      %th
+      %th
+      %th
+
+  %tbody
+    - @platforms.each do |platform|
+      %tr
+        %td= platform.name
+        %td= platform.description
+        %td= platform.source_code
+        %td= platform.software_license
+        %td= platform.slug
+        %td= link_to 'Show', platform
+        %td= link_to 'Edit', edit_platform_path(platform)
+        %td= link_to 'Destroy', platform, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Platform', new_platform_path

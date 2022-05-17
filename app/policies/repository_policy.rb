@@ -1,0 +1,3 @@
+class RepositoryPolicy < ApplicationPolicy
+
+end

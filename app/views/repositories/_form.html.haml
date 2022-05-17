@@ -1,0 +1,223 @@
+= form_for @repository do |f|
+  - if @repository.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@repository.errors.count, "error")} prohibited this repository from being saved:"
+      %ul
+        - @repository.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :academic_applicant_only
+    = f.text_field :academic_applicant_only
+  .field
+    = f.label :accepted_content_formats
+    = f.text_field :accepted_content_formats
+  .field
+    = f.label :accepted_content_languages
+    = f.text_field :accepted_content_languages
+  .field
+    = f.label :accepted_content_level
+    = f.text_field :accepted_content_level
+  .field
+    = f.label :accepted_content_types
+    = f.text_field :accepted_content_types
+  .field
+    = f.label :accepted_supplementary_content
+    = f.text_field :accepted_supplementary_content
+  .field
+    = f.label :access_to_content
+    = f.text_field :access_to_content
+  .field
+    = f.label :access_to_metadata
+    = f.text_field :access_to_metadata
+  .field
+    = f.label :accessibility_of_conflict_of_interest_procedures
+    = f.text_field :accessibility_of_conflict_of_interest_procedures
+  .field
+    = f.label :account_creation
+    = f.text_field :account_creation
+  .field
+    = f.label :associated_editor
+    = f.text_field :associated_editor
+  .field
+    = f.label :associated_journal
+    = f.text_field :associated_journal
+  .field
+    = f.label :author_pid
+    = f.text_field :author_pid
+  .field
+    = f.label :availability_of_associated_content
+    = f.text_field :availability_of_associated_content
+  .field
+    = f.label :backups
+    = f.text_field :backups
+  .field
+    = f.label :business_model
+    = f.text_field :business_model
+  .field
+    = f.label :certificate_or_labels
+    = f.text_field :certificate_or_labels
+  .field
+    = f.label :closure_date
+    = f.text_field :closure_date
+  .field
+    = f.label :contact
+    = f.text_field :contact
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :disciplinary_scope
+    = f.text_field :disciplinary_scope
+  .field
+    = f.label :editorial_notes
+    = f.text_field :editorial_notes
+  .field
+    = f.label :full_name
+    = f.text_field :full_name
+  .field
+    = f.label :functional_description
+    = f.text_field :functional_description
+  .field
+    = f.label :funding
+    = f.text_field :funding
+  .field
+    = f.label :interoperability
+    = f.text_field :interoperability
+  .field
+    = f.label :journal_submission
+    = f.text_field :journal_submission
+  .field
+    = f.label :keywords
+    = f.text_field :keywords
+  .field
+    = f.label :last_update
+    = f.text_field :last_update
+  .field
+    = f.label :launch_date
+    = f.text_field :launch_date
+  .field
+    = f.label :licensing
+    = f.text_field :licensing
+  .field
+    = f.label :mechanisms_to_report_concerns_about_content
+    = f.text_field :mechanisms_to_report_concerns_about_content
+  .field
+    = f.label :mechanisms_to_report_concerns_about_plagiarism
+    = f.text_field :mechanisms_to_report_concerns_about_plagiarism
+  .field
+    = f.label :metadata_formats
+    = f.text_field :metadata_formats
+  .field
+    = f.label :metadata_languages
+    = f.text_field :metadata_languages
+  .field
+    = f.label :metadata_properties
+    = f.text_field :metadata_properties
+  .field
+    = f.label :method_for_reuse_of_metadata
+    = f.text_field :method_for_reuse_of_metadata
+  .field
+    = f.label :moderation
+    = f.text_field :moderation
+  .field
+    = f.label :oai_pmh_url
+    = f.text_field :oai_pmh_url
+  .field
+    = f.label :objectives
+    = f.text_field :objectives
+  .field
+    = f.label :open_source
+    = f.text_field :open_source
+  .field
+    = f.label :opendoar_id
+    = f.text_field :opendoar_id
+  .field
+    = f.label :owner_country
+    = f.text_field :owner_country
+  .field
+    = f.label :owner_full_name
+    = f.text_field :owner_full_name
+  .field
+    = f.label :owner_short_name
+    = f.text_field :owner_short_name
+  .field
+    = f.label :owner_url
+    = f.text_field :owner_url
+  .field
+    = f.label :ownership_type
+    = f.text_field :ownership_type
+  .field
+    = f.label :peer_review_status_indication
+    = f.text_field :peer_review_status_indication
+  .field
+    = f.label :permission_for_re_use_of_metadata
+    = f.text_field :permission_for_re_use_of_metadata
+  .field
+    = f.label :persistence_of_content
+    = f.text_field :persistence_of_content
+  .field
+    = f.label :persistent_identifier
+    = f.text_field :persistent_identifier
+  .field
+    = f.label :platform
+    = f.text_field :platform
+  .field
+    = f.label :platform_languages
+    = f.text_field :platform_languages
+  .field
+    = f.label :preservation_policy
+    = f.text_field :preservation_policy
+  .field
+    = f.label :record_count
+    = f.text_field :record_count
+  .field
+    = f.label :remining_indrawn_item
+    = f.text_field :remining_indrawn_item
+  .field
+    = f.label :repository_type
+    = f.text_field :repository_type
+  .field
+    = f.label :scientific_technical_committees
+    = f.text_field :scientific_technical_committees
+  .field
+    = f.label :service_pricing
+    = f.text_field :service_pricing
+  .field
+    = f.label :short_name
+    = f.text_field :short_name
+  .field
+    = f.label :status
+    = f.text_field :status
+  .field
+    = f.label :terms_of_use
+    = f.text_field :terms_of_use
+  .field
+    = f.label :text_embargo
+    = f.text_field :text_embargo
+  .field
+    = f.label :time_from_submission_to_posting
+    = f.text_field :time_from_submission_to_posting
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :user_committees
+    = f.text_field :user_committees
+  .field
+    = f.label :versioning_policy
+    = f.text_field :versioning_policy
+  .field
+    = f.label :who_can_deposit
+    = f.text_field :who_can_deposit
+  .field
+    = f.label :withdrawal_authorisation
+    = f.text_field :withdrawal_authorisation
+  .field
+    = f.label :withdrawal_policy
+    = f.text_field :withdrawal_policy
+  .field
+    = f.label :slug
+    = f.text_field :slug
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,228 @@
+%h4.page-title
+  = "Repository: #{@repository.full_name}"
+%table.invisible-layout-table
+  %tr
+    %td.field-name
+      Description:
+    %td
+      = @repository.description
+
+-#%p#notice= notice
+-#
+-#%p
+-#  %b Academic applicant only:
+-#  = @repository.academic_applicant_only
+-#%p
+-#  %b Accepted content formats:
+-#  = @repository.accepted_content_formats
+-#%p
+-#  %b Accepted content languages:
+-#  = @repository.accepted_content_languages
+-#%p
+-#  %b Accepted content level:
+-#  = @repository.accepted_content_level
+-#%p
+-#  %b Accepted content types:
+-#  = @repository.accepted_content_types
+-#%p
+-#  %b Accepted supplementary content:
+-#  = @repository.accepted_supplementary_content
+-#%p
+-#  %b Access to content:
+-#  = @repository.access_to_content
+-#%p
+-#  %b Access to metadata:
+-#  = @repository.access_to_metadata
+-#%p
+-#  %b Accessibility of conflict of interest procedures:
+-#  = @repository.accessibility_of_conflict_of_interest_procedures
+-#%p
+-#  %b Account creation:
+-#  = @repository.account_creation
+-#%p
+-#  %b Associated editor:
+-#  = @repository.associated_editor
+-#%p
+-#  %b Associated journal:
+-#  = @repository.associated_journal
+-#%p
+-#  %b Author pid:
+-#  = @repository.author_pid
+-#%p
+-#  %b Availability of associated content:
+-#  = @repository.availability_of_associated_content
+-#%p
+-#  %b Backups:
+-#  = @repository.backups
+-#%p
+-#  %b Business model:
+-#  = @repository.business_model
+-#%p
+-#  %b Certificate or labels:
+-#  = @repository.certificate_or_labels
+-#%p
+-#  %b Closure date:
+-#  = @repository.closure_date
+-#%p
+-#  %b Contact:
+-#  = @repository.contact
+-#%p
+-#  %b Description:
+-#  = @repository.description
+-#%p
+-#  %b Disciplinary scope:
+-#  = @repository.disciplinary_scope
+-#%p
+-#  %b Editorial notes:
+-#  = @repository.editorial_notes
+-#%p
+-#  %b Full name:
+-#  = @repository.full_name
+-#%p
+-#  %b Functional description:
+-#  = @repository.functional_description
+-#%p
+-#  %b Funding:
+-#  = @repository.funding
+-#%p
+-#  %b Interoperability:
+-#  = @repository.interoperability
+-#%p
+-#  %b Journal submission:
+-#  = @repository.journal_submission
+-#%p
+-#  %b Keywords:
+-#  = @repository.keywords
+-#%p
+-#  %b Last update:
+-#  = @repository.last_update
+-#%p
+-#  %b Launch date:
+-#  = @repository.launch_date
+-#%p
+-#  %b Licensing:
+-#  = @repository.licensing
+-#%p
+-#  %b Mechanisms to report concerns about content:
+-#  = @repository.mechanisms_to_report_concerns_about_content
+-#%p
+-#  %b Mechanisms to report concerns about plagiarism:
+-#  = @repository.mechanisms_to_report_concerns_about_plagiarism
+-#%p
+-#  %b Metadata formats:
+-#  = @repository.metadata_formats
+-#%p
+-#  %b Metadata languages:
+-#  = @repository.metadata_languages
+-#%p
+-#  %b Metadata properties:
+-#  = @repository.metadata_properties
+-#%p
+-#  %b Method for reuse of metadata:
+-#  = @repository.method_for_reuse_of_metadata
+-#%p
+-#  %b Moderation:
+-#  = @repository.moderation
+-#%p
+-#  %b Oai pmh url:
+-#  = @repository.oai_pmh_url
+-#%p
+-#  %b Objectives:
+-#  = @repository.objectives
+-#%p
+-#  %b Open source:
+-#  = @repository.open_source
+-#%p
+-#  %b Opendoar:
+-#  = @repository.opendoar_id
+-#%p
+-#  %b Owner country:
+-#  = @repository.owner_country
+-#%p
+-#  %b Owner full name:
+-#  = @repository.owner_full_name
+-#%p
+-#  %b Owner short name:
+-#  = @repository.owner_short_name
+-#%p
+-#  %b Owner url:
+-#  = @repository.owner_url
+-#%p
+-#  %b Ownership type:
+-#  = @repository.ownership_type
+-#%p
+-#  %b Peer review status indication:
+-#  = @repository.peer_review_status_indication
+-#%p
+-#  %b Permission for re use of metadata:
+-#  = @repository.permission_for_re_use_of_metadata
+-#%p
+-#  %b Persistence of content:
+-#  = @repository.persistence_of_content
+-#%p
+-#  %b Persistent identifier:
+-#  = @repository.persistent_identifier
+-#%p
+-#  %b Platform:
+-#  = @repository.platform
+-#%p
+-#  %b Platform languages:
+-#  = @repository.platform_languages
+-#%p
+-#  %b Preservation policy:
+-#  = @repository.preservation_policy
+-#%p
+-#  %b Record count:
+-#  = @repository.record_count
+-#%p
+-#  %b Remining indrawn item:
+-#  = @repository.remining_indrawn_item
+-#%p
+-#  %b Repository type:
+-#  = @repository.repository_type
+-#%p
+-#  %b Scientific technical committees:
+-#  = @repository.scientific_technical_committees
+-#%p
+-#  %b Service pricing:
+-#  = @repository.service_pricing
+-#%p
+-#  %b Short name:
+-#  = @repository.short_name
+-#%p
+-#  %b Status:
+-#  = @repository.status
+-#%p
+-#  %b Terms of use:
+-#  = @repository.terms_of_use
+-#%p
+-#  %b Text embargo:
+-#  = @repository.text_embargo
+-#%p
+-#  %b Time from submission to posting:
+-#  = @repository.time_from_submission_to_posting
+-#%p
+-#  %b Url:
+-#  = @repository.url
+-#%p
+-#  %b User committees:
+-#  = @repository.user_committees
+-#%p
+-#  %b Versioning policy:
+-#  = @repository.versioning_policy
+-#%p
+-#  %b Who can deposit:
+-#  = @repository.who_can_deposit
+-#%p
+-#  %b Withdrawal authorisation:
+-#  = @repository.withdrawal_authorisation
+-#%p
+-#  %b Withdrawal policy:
+-#  = @repository.withdrawal_policy
+-#%p
+-#  %b Slug:
+-#  = @repository.slug
+-#
+-#= link_to 'Edit', edit_repository_path(@repository)
+-#\|
+-#= link_to 'Back', repositories_path

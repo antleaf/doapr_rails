@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @platform.name
+%p
+  %b Description:
+  = @platform.description
+%p
+  %b Source code:
+  = @platform.source_code
+%p
+  %b Software license:
+  = @platform.software_license
+%p
+  %b Slug:
+  = @platform.slug
+
+= link_to 'Edit', edit_platform_path(@platform)
+\|
+= link_to 'Back', platforms_path
