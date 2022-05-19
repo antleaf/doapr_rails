@@ -1,0 +1,35 @@
+%table{:class=>"sorted-table table table-condensed table-striped"}
+  %thead
+    %tr
+      %th Name
+      %th Code
+      -#%th Latitude
+      -#%th Longitude
+      %th Continent
+      %th Repositories
+      - if (policy(Country).edit?)|(policy(Country).destroy?)
+        %th.actions Actions
+  %tbody
+    - country_list.each do |country|
+      %tr
+        %td.no-wrap
+          %div.hover-over{style:"width:100%;"}
+            = link_to country.name,country
+        %td
+          =country.code
+          - begin
+            =image_tag "flags/#{country.code.downcase}.png", class:"index-flags"
+          - rescue Exception => e
+            =image_tag "flags/_unknown.png", class:"index-flags"
+        -#%td=country.latitude
+        -#%td=country.longitude
+        %td=country.continent
+        %td=country.repositories.count
+        - if (policy(Country).edit?)|(policy(Country).destroy?)
+          %td.actions
+            - if policy(Country).edit?
+              -# = link_to image_tag('icons/edit.png',alt: 'Edit', title: 'Edit'),edit_country_path(country)
+              = link_to 'Edit', edit_country_path(country), :class => "btn btn-secondary btn-sm"
+            - if policy(Country).destroy?
+              -# = link_to image_tag('icons/delete.png',alt: 'Delete', title: 'Delete'), country, method: :delete, data: { confirm: 'Are you sure?' }
+              = link_to 'Delete', country, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-secondary btn-sm"

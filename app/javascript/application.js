@@ -3,6 +3,9 @@
 import "controllers"
 import jquery from 'jquery'
 import DataTable from 'datatables'
+import Rails from '@rails/ujs';
+
+Rails.start();
 
 window.jQuery = jquery
 window.$ = jquery

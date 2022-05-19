@@ -1,3 +1,27 @@
+%h4.page-title
+  != "Country: <i>#{@country.name}</i>"
+%table.invisible-layout-table
+  %tr
+    %td.field-name Code:
+    %td
+      = @country.code
+      - begin
+        =image_tag "flags/#{@country.code.downcase}.png", class:"index-flags"
+      - rescue Exception => e
+        =image_tag "flags/_unknown.png", class:"index-flags"
+  %tr
+    %td.field-name Continent:
+    %td=@country.continent
+- if policy(Country).edit?
+  = link_to 'Edit', edit_country_path(@country), :class => "btn btn-secondary btn-sm"
+%br
+%h5
+  !="Repositories based in: <i>#{@country.name}</i>"
+
+= render(:partial => 'repositories/table',:locals => {:repository_list => @country.repositories})
+
+
+
 %p#notice= notice
 
 %p

@@ -16,7 +16,7 @@ class CreateRepositories < ActiveRecord::Migration[7.0]
       t.string :author_pid
       t.string :availability_of_associated_content
       t.string :backups
-      t.references :business_model, null: false, foreign_key: true
+      t.references :business_model, null: true, foreign_key: true
       t.string :certificate_or_labels
       t.string :closure_date
       t.string :contact
@@ -43,8 +43,7 @@ class CreateRepositories < ActiveRecord::Migration[7.0]
       t.string :objectives
       t.string :open_source
       t.string :opendoar_id
-      # t.references :owner_country, null: false, foreign_key: true
-      t.references :owner_country, null: false, foreign_key: {to_table: :countries}
+      t.references :country, null: true, foreign_key: true
       t.string :owner_full_name
       t.string :owner_short_name
       t.string :owner_url
@@ -53,7 +52,7 @@ class CreateRepositories < ActiveRecord::Migration[7.0]
       t.string :permission_for_re_use_of_metadata
       t.string :persistence_of_content
       t.string :persistent_identifier
-      t.references :platform, null: false, foreign_key: true
+      t.references :platform, null: true, foreign_key: true
       t.string :platform_languages
       t.string :preservation_policy
       t.string :record_count
@@ -62,7 +61,7 @@ class CreateRepositories < ActiveRecord::Migration[7.0]
       t.string :scientific_technical_committees
       t.string :service_pricing
       t.string :short_name
-      t.references :status, null: false, foreign_key: true
+      t.references :status, null: true, foreign_key: true
       t.string :terms_of_use
       t.string :text_embargo
       t.string :time_from_submission_to_posting

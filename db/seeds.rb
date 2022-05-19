@@ -8,13 +8,9 @@ User.destroy_all
 Discipline.destroy_all
 Repository.destroy_all
 BusinessModel.destroy_all
-BusinessModel.create(name: '_unknown')
 Status.destroy_all
-Status.create(name: '_unknown')
 Platform.destroy_all
-Platform.create(name: '_unknown')
 Country.destroy_all
-Country.create(name: '_unknown')
 
 admin_role = Role.create(name: 'admin')
 editor_role = Role.create(name: 'editor')
@@ -77,7 +73,7 @@ CSV.foreach("#{source_data_folder_path}/DOAPR - Repositories.csv", { headers: tr
     author_pid: row['Author PID'],
     availability_of_associated_content: row['Availability of Associated Content'],
     backups: row['Backups'],
-    business_model: getBusinessModel(row['Business Model']),
+    business_model: BusinessModel.find_by_name(row['Business Model']),
     certificate_or_labels: row['Certificate or Labels'],
     closure_date: row['Closure Date'],
     contact: row['Contact'],
@@ -103,7 +99,7 @@ CSV.foreach("#{source_data_folder_path}/DOAPR - Repositories.csv", { headers: tr
     objectives: row['Objectives'],
     open_source: row['Open Source?'],
     opendoar_id: row['OpenDOAR ID'],
-    owner_country: getCountry(row['Owner Country']),
+    country: Country.find_by_name(row['Owner Country']),
     owner_full_name: row['Owner Full Name'],
     owner_short_name: row['Owner Short Name'],
     owner_url: row['Owner URL'],
@@ -112,7 +108,7 @@ CSV.foreach("#{source_data_folder_path}/DOAPR - Repositories.csv", { headers: tr
     permission_for_re_use_of_metadata: row['Permission For Re-use Of Metadata'],
     persistence_of_content: row['Persistence of Content'],
     persistent_identifier: row['Persistent Identifier'],
-    platform: getPlatform(row['Platform']),
+    platform: Platform.find_by_name(row['Platform']),
     platform_languages: row['Platform Languages'],
     preservation_policy: row['Preservation Policy'],
     record_count: row['Record Count'],
@@ -121,7 +117,7 @@ CSV.foreach("#{source_data_folder_path}/DOAPR - Repositories.csv", { headers: tr
     scientific_technical_committees: row['Scientific/Technical Committees'],
     service_pricing: row['Service Pricing'],
     short_name: row['Short Name'],
-    status: getStatus(row['Status']),
+    status: Status.find_by_name(row['Status']),
     terms_of_use: row['Terms of Use'],
     text_embargo: row['Text Embargo'],
     time_from_submission_to_posting: row['Time from submission to posting'],
@@ -132,4 +128,16 @@ CSV.foreach("#{source_data_folder_path}/DOAPR - Repositories.csv", { headers: tr
     withdrawal_authorisation: row['Withdrawal Authorisation'],
     withdrawal_policy: row['Withdrawal Policy']
   )
+end
+
+i = 1
+CSV.foreach("#{source_data_folder_path}/DOAPR - Repository-Disciplines.csv", { headers: true }) do |row|
+  begin
+    repo = Repository.friendly.find(row['Repository ID'])
+    discipline = Discipline.friendly.find(row['Discipline ID'])
+    repo.disciplines << discipline
+  rescue Exception => e
+    puts "problem with row #{i} - #{e.message}"
+  end
+  i += 1
 end
