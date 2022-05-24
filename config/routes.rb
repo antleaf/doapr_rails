@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :services
+  resources :functions
   resources :countries
   resources :platforms
   resources :statuses

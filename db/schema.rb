@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_18_134539) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
   create_table "business_models", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -43,6 +43,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_18_134539) do
   create_table "disciplines_repositories", id: false, force: :cascade do |t|
     t.integer "discipline_id", null: false
     t.integer "repository_id", null: false
+  end
+
+  create_table "functions", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_functions_on_slug", unique: true
   end
 
   create_table "passwordless_sessions", force: :cascade do |t|
@@ -162,6 +171,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_18_134539) do
   create_table "roles_users", id: false, force: :cascade do |t|
     t.integer "role_id", null: false
     t.integer "user_id", null: false
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "url"
+    t.integer "cost"
+    t.string "slug"
+    t.text "editorial"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_services_on_slug", unique: true
   end
 
   create_table "statuses", force: :cascade do |t|

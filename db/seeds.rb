@@ -7,10 +7,12 @@ Role.destroy_all
 User.destroy_all
 Discipline.destroy_all
 Repository.destroy_all
+Service.destroy_all
 BusinessModel.destroy_all
 Status.destroy_all
 Platform.destroy_all
 Country.destroy_all
+Function.destroy_all
 
 admin_role = Role.create(name: 'admin')
 editor_role = Role.create(name: 'editor')
@@ -23,6 +25,10 @@ admin_user = User.create(
 
 admin_user.roles << admin_role
 admin_user.roles << editor_role
+
+CSV.foreach("#{source_data_folder_path}/DOAPR - Functions.csv", { headers: true }) do |row|
+  Function.create(name: row['Name'])
+end
 
 CSV.foreach("#{source_data_folder_path}/DOAPR - Disciplines.csv", { headers: true }) do |row|
   Discipline.create(name: row['Name'])
@@ -43,6 +49,22 @@ CSV.foreach("#{source_data_folder_path}/DOAPR - Platforms.csv", { headers: true 
     source_code: row['Source Code'],
     software_license: row['Software License']
   )
+end
+
+CSV.foreach("#{source_data_folder_path}/DOAPR - Services.csv", { headers: true }) do |row|
+  service = Service.create(
+    name: row['Name'],
+    description: row['Description'],
+    url: row['URL']
+  )
+  if row['Cost'] == 'completely free' then
+    service.completely_free!
+  elsif row['Cost'] == 'free with premium features' then
+    service.free_with_premium_features!
+  elsif row['Cost'] == 'premium only' then
+    service.premium_only!
+  end
+  service.save!
 end
 
 CSV.foreach("#{source_data_folder_path}/DOAPR - Countries.csv", { headers: true }) do |row|
