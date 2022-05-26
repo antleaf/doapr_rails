@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_26_085558) do
   create_table "business_models", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -32,6 +32,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
     t.index ["slug"], name: "index_countries_on_slug", unique: true
   end
 
+  create_table "countries_repositories", id: false, force: :cascade do |t|
+    t.integer "country_id", null: false
+    t.integer "repository_id", null: false
+  end
+
   create_table "disciplines", force: :cascade do |t|
     t.string "name"
     t.string "slug"
@@ -45,6 +50,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
     t.integer "repository_id", null: false
   end
 
+  create_table "features", force: :cascade do |t|
+    t.integer "repository_id", null: false
+    t.integer "function_id", null: false
+    t.integer "service_id"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["function_id"], name: "index_features_on_function_id"
+    t.index ["repository_id"], name: "index_features_on_repository_id"
+    t.index ["service_id"], name: "index_features_on_service_id"
+  end
+
   create_table "functions", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -52,6 +69,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_functions_on_slug", unique: true
+  end
+
+  create_table "functions_services", id: false, force: :cascade do |t|
+    t.integer "function_id", null: false
+    t.integer "service_id", null: false
   end
 
   create_table "passwordless_sessions", force: :cascade do |t|
@@ -66,17 +88,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["authenticatable_type", "authenticatable_id"], name: "authenticatable"
-  end
-
-  create_table "platforms", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "source_code"
-    t.string "software_license"
-    t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["slug"], name: "index_platforms_on_slug", unique: true
   end
 
   create_table "repositories", force: :cascade do |t|
@@ -122,7 +133,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
     t.string "objectives"
     t.string "open_source"
     t.string "opendoar_id"
-    t.integer "country_id"
     t.string "owner_full_name"
     t.string "owner_short_name"
     t.string "owner_url"
@@ -131,7 +141,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
     t.string "permission_for_re_use_of_metadata"
     t.string "persistence_of_content"
     t.string "persistent_identifier"
-    t.integer "platform_id"
+    t.string "platform"
     t.string "platform_languages"
     t.string "preservation_policy"
     t.string "record_count"
@@ -154,8 +164,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["business_model_id"], name: "index_repositories_on_business_model_id"
-    t.index ["country_id"], name: "index_repositories_on_country_id"
-    t.index ["platform_id"], name: "index_repositories_on_platform_id"
     t.index ["slug"], name: "index_repositories_on_slug", unique: true
     t.index ["status_id"], name: "index_repositories_on_status_id"
   end
@@ -202,8 +210,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_103401) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "features", "functions"
+  add_foreign_key "features", "repositories"
+  add_foreign_key "features", "services"
   add_foreign_key "repositories", "business_models"
-  add_foreign_key "repositories", "countries"
-  add_foreign_key "repositories", "platforms"
   add_foreign_key "repositories", "statuses"
 end

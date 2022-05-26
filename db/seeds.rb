@@ -1,19 +1,25 @@
 require 'csv'
 require './db/seeds_helpers'
 
-source_data_folder_path = "#{File.dirname(__FILE__)}/source_data/2022-05-16"
+source_data_folder_path = "#{File.dirname(__FILE__)}/source_data/DOAPR-new-processed"
+
+LOG.info("Set source folder path to #{source_data_folder_path}")
+LOG.debug("Destroying all data...")
 
 Role.destroy_all
 User.destroy_all
+Feature.destroy_all
 Discipline.destroy_all
 Repository.destroy_all
 Service.destroy_all
 BusinessModel.destroy_all
 Status.destroy_all
-Platform.destroy_all
 Country.destroy_all
 Function.destroy_all
 
+LOG.info("All data destroyed")
+
+LOG.debug("Creating roles and users...")
 admin_role = Role.create(name: 'admin')
 editor_role = Role.create(name: 'editor')
 
@@ -26,140 +32,238 @@ admin_user = User.create(
 admin_user.roles << admin_role
 admin_user.roles << editor_role
 
-CSV.foreach("#{source_data_folder_path}/DOAPR - Functions.csv", { headers: true }) do |row|
-  Function.create(name: row['Name'])
-end
+LOG.info("User and roles created, users allocated to roles")
 
-CSV.foreach("#{source_data_folder_path}/DOAPR - Disciplines.csv", { headers: true }) do |row|
-  Discipline.create(name: row['Name'])
+LOG.debug("Creating functions...")
+CSV.foreach("#{source_data_folder_path}/Functions-table_1.csv", { headers: true }) do |row|
+  Function.create(name: row['name'])
 end
+LOG.info("Functions created")
 
-CSV.foreach("#{source_data_folder_path}/DOAPR - Business Models.csv", { headers: true }) do |row|
-  BusinessModel.create(name: row['Name'])
+LOG.debug("Creating disciplines...")
+CSV.foreach("#{source_data_folder_path}/Disciplines-table_1.csv", { headers: true }) do |row|
+  Discipline.create(name: row['name'])
 end
+LOG.info("Disciplines created")
 
-CSV.foreach("#{source_data_folder_path}/DOAPR - Statuses.csv", { headers: true }) do |row|
-  Status.create(name: row['Name'])
-end
+LOG.debug("Creating business models...")
+BusinessModel.create(name: "Non Profit")
+BusinessModel.create(name: "For Profit")
+LOG.info("Business models created")
 
-CSV.foreach("#{source_data_folder_path}/DOAPR - Platforms.csv", { headers: true }) do |row|
-  Platform.create(
-    name: row['Name'],
-    description: row['Description'],
-    source_code: row['Source Code'],
-    software_license: row['Software License']
-  )
-end
+LOG.debug("Creating statuses...")
+Status.create(name: "Open")
+Status.create(name: "Closed to Submission Only")
+Status.create(name: "Closed and Inaccessible")
+LOG.info("Statuses created")
 
-CSV.foreach("#{source_data_folder_path}/DOAPR - Services.csv", { headers: true }) do |row|
+#
+# CSV.foreach("#{source_data_folder_path}/DOAPR - Platforms.csv", { headers: true }) do |row|
+#   Platform.create(
+#     name: row['Name'],
+#     description: row['Description'],
+#     source_code: row['Source Code'],
+#     software_license: row['Software License']
+#   )
+# end
+#
+
+LOG.debug("Creating services...")
+CSV.foreach("#{source_data_folder_path}/Services-table_1.csv", { headers: true }) do |row|
   service = Service.create(
-    name: row['Name'],
-    description: row['Description'],
-    url: row['URL']
+    name: row['name'],
+    description: row['description'],
+    url: row['url']
   )
-  if row['Cost'] == 'completely free' then
+  if row['cost'] == 'completely_free' then
     service.completely_free!
-  elsif row['Cost'] == 'free with premium features' then
+  elsif row['cost'] == 'free_with_premium_features' then
     service.free_with_premium_features!
-  elsif row['Cost'] == 'premium only' then
+  elsif row['cost'] == 'premium_only' then
     service.premium_only!
   end
   service.save!
 end
+LOG.info("Services created")
 
-CSV.foreach("#{source_data_folder_path}/DOAPR - Countries.csv", { headers: true }) do |row|
+LOG.debug("Creating countries...")
+CSV.foreach("#{source_data_folder_path}/Countries-table_1.csv", { headers: true }) do |row|
   Country.create(
-    name: row['Name'],
-    code: row['Code'],
-    latitude: row['Centre Latitude'],
-    longitude: row['Centre Longitude'],
-    continent: row['Continent']
+    name: row['name'],
+    code: row['code'],
+    latitude: row['latitude'],
+    longitude: row['longitude'],
+    continent: row['continent']
   )
 end
+LOG.info("Countries created")
 
-CSV.foreach("#{source_data_folder_path}/DOAPR - Repositories.csv", { headers: true }) do |row|
-  repository = Repository.create(
-    full_name: row['Full Name'],
-    academic_applicant_only: row['Academic Applicant Only'],
-    accepted_content_formats: row['Accepted Content Formats'],
-    accepted_content_languages: row['Accepted Content Languages'],
-    accepted_content_level: row['Accepted Content Level'],
-    accepted_content_types: row['Accepted Content Types'],
-    accepted_supplementary_content: row['Accepted Supplementary Content'],
-    access_to_content: row['Access to content'],
-    access_to_metadata: row['Access to metadata'],
-    accessibility_of_conflict_of_interest_procedures: row['Accessibility Of Conflict Of Interest Procedures'],
-    account_creation: row['Account Creation'],
-    associated_editor: row['Associated Editor'],
-    associated_journal: row['Associated Journal'],
-    author_pid: row['Author PID'],
-    availability_of_associated_content: row['Availability of Associated Content'],
-    backups: row['Backups'],
-    business_model: BusinessModel.find_by_name(row['Business Model']),
-    certificate_or_labels: row['Certificate or Labels'],
-    closure_date: row['Closure Date'],
-    contact: row['Contact'],
-    description: row['Description'],
-    disciplinary_scope: row['Disciplinary Scope'],
-    editorial_notes: row['Editorial Notes'],
-    functional_description: row['Functional Description'],
-    funding: row['Funding'],
-    interoperability: row['Interoperability'],
-    journal_submission: row['Journal Submission'],
-    keywords: row['Keywords'],
-    last_update: row['Last Update'],
-    launch_date: row['Launch Date'],
-    licensing: row['Licensing'],
-    mechanisms_to_report_concerns_about_content: row['Mechanisms To Report Concerns About Content'],
-    mechanisms_to_report_concerns_about_plagiarism: row['Mechanisms To Report Concerns About Plagiarism'],
-    metadata_formats: row['Metadata Format(s)'],
-    metadata_languages: row['Metadata Languages'],
-    metadata_properties: row['Metadata Properties'],
-    method_for_reuse_of_metadata: row['Method For Re-use Of Metadata'],
-    moderation: row['Moderation'],
-    oai_pmh_url: row['OAI-PMH URL'],
-    objectives: row['Objectives'],
-    open_source: row['Open Source?'],
-    opendoar_id: row['OpenDOAR ID'],
-    country: Country.find_by_name(row['Owner Country']),
-    owner_full_name: row['Owner Full Name'],
-    owner_short_name: row['Owner Short Name'],
-    owner_url: row['Owner URL'],
-    ownership_type: row['Ownership Type'],
-    peer_review_status_indication: row['Peer-review Status Indication'],
-    permission_for_re_use_of_metadata: row['Permission For Re-use Of Metadata'],
-    persistence_of_content: row['Persistence of Content'],
-    persistent_identifier: row['Persistent Identifier'],
-    platform: Platform.find_by_name(row['Platform']),
-    platform_languages: row['Platform Languages'],
-    preservation_policy: row['Preservation Policy'],
-    record_count: row['Record Count'],
-    remining_indrawn_item: row['Remining Indrawn Item'],
-    repository_type: row['Repository Type'],
-    scientific_technical_committees: row['Scientific/Technical Committees'],
-    service_pricing: row['Service Pricing'],
-    short_name: row['Short Name'],
-    status: Status.find_by_name(row['Status']),
-    terms_of_use: row['Terms of Use'],
-    text_embargo: row['Text Embargo'],
-    time_from_submission_to_posting: row['Time from submission to posting'],
-    url: row['URL'],
-    user_committees: row['User Committees'],
-    versioning_policy: row['Versioning Policy'],
-    who_can_deposit: row['Who Can Deposit?'],
-    withdrawal_authorisation: row['Withdrawal Authorisation'],
-    withdrawal_policy: row['Withdrawal Policy']
+LOG.debug("Creating repositories...")
+CSV.foreach("#{source_data_folder_path}/Repositories-table_1.csv", { headers: true }) do |row|
+  Repository.create(
+    full_name: row['full_name'],
+    url: row['url'],
+    description: row['description'],
+    opendoar_id: row['opendoar_id'],
+    oai_pmh_url: row['oai_pmh_url'],
+    editorial_notes: row['editorial_notes']
   )
 end
+LOG.info("Repositories created (basic info)")
 
-i = 1
-CSV.foreach("#{source_data_folder_path}/DOAPR - Repository-Disciplines.csv", { headers: true }) do |row|
+LOG.debug("Adding metadata to repositories...")
+CSV.foreach("#{source_data_folder_path}/Repositories-table_1.csv", { headers: true }).with_index(1) do |row, i|
+  repository = Repository.friendly.find(row['slug'])
+  if repository then
+    if row['In Preprints list?'] == 'yes' then
+      repository.academic_applicant_only = row['academic_applicant_only']
+      repository.accepted_content_formats = row['accepted_content_formats']
+      repository.accepted_content_languages = row['accepted_content_languages']
+      repository.accepted_content_level = row['accepted_content_level']
+      repository.accepted_content_types = row['accepted_content_types']
+      repository.accepted_supplementary_content = row['accepted_supplementary_content']
+      repository.access_to_content = row['access_to_content']
+      repository.access_to_metadata = row['access_to_metadata']
+      repository.accessibility_of_conflict_of_interest_procedures = row['accessibility_of_conflict_of_interest_procedures']
+      repository.account_creation = row['account_creation']
+      repository.associated_editor = row['associated_editor']
+      repository.associated_journal = row['associated_journal']
+      repository.author_pid = row['author_pid']
+      repository.availability_of_associated_content = row['availability_of_associated_content']
+      repository.backups = row['backups']
+      repository.business_model = BusinessModel.friendly.find(row['business_model'])
+      repository.certificate_or_labels = row['certificate_or_labels']
+      repository.closure_date = row['closure_date']
+      repository.contact = row['contact']
+      repository.disciplinary_scope = row['disciplinary_scope']
+      repository.functional_description = row['functional_description']
+      repository.funding = row['funding']
+      repository.interoperability = row['interoperability']
+      repository.journal_submission = row['journal_submission']
+      repository.keywords = row['keywords']
+      repository.last_update = row['last_update']
+      repository.launch_date = row['launch_date']
+      repository.licensing = row['licensing']
+      repository.mechanisms_to_report_concerns_about_content = row['mechanisms_to_report_concerns_about_content']
+      repository.mechanisms_to_report_concerns_about_plagiarism = row['mechanisms_to_report_concerns_about_plagiarism']
+      repository.metadata_formats = row['metadata_formats']
+      repository.metadata_languages = row['metadata_languages']
+      repository.metadata_properties = row['metadata_properties']
+      repository.method_for_reuse_of_metadata = row['method_for_reuse_of_metadata']
+      repository.moderation = row['moderation']
+      repository.oai_pmh_url = row['oai_pmh_url']
+      repository.objectives = row['objectives']
+      repository.open_source = row['open_source']
+      repository.owner_full_name = row['owner_full_name']
+      repository.owner_short_name = row['owner_short_name']
+      repository.owner_url = row['owner_url']
+      repository.ownership_type = row['ownership_type']
+      repository.peer_review_status_indication = row['peer_review_status_indication']
+      repository.permission_for_re_use_of_metadata = row['permission_for_re_use_of_metadata']
+      repository.persistence_of_content = row['persistence_of_content']
+      repository.persistent_identifier = row['persistent_identifier']
+      repository.platform = row['platform']
+      repository.platform_languages = row['platform_languages']
+      repository.preservation_policy = row['preservation_policy']
+      repository.record_count = row['record_count']
+      repository.remining_indrawn_item = row['remining_indrawn_item']
+      repository.repository_type = row['repository_type']
+      repository.scientific_technical_committees = row['scientific_technical_committees']
+      repository.service_pricing = row['service_pricing']
+      repository.short_name = row['short_name']
+      repository.status = Status.friendly.find(row['status'])
+      repository.terms_of_use = row['terms_of_use']
+      repository.text_embargo = row['text_embargo']
+      repository.time_from_submission_to_posting = row['time_from_submission_to_posting']
+      repository.user_committees = row['user_committees']
+      repository.versioning_policy = row['versioning_policy']
+      repository.who_can_deposit = row['who_can_deposit']
+      repository.withdrawal_authorisation = row['withdrawal_authorisation']
+      repository.withdrawal_policy = row['withdrawal_policy']
+
+      repository.save!
+
+      ['text_mining', 'search_engine', 'bibliographic_references_management', 'metrics', 'indexing', 'other_features', 'writing', 'peer_review', 'commenting', 'revision_follow_up', 'endorsement', 'plagiarism_detection', 'communications_channels'].each do |function_field_name|
+        if !(row[function_field_name] == nil || row[function_field_name].casecmp?('No')) then
+          begin
+            Feature.create(
+              repository: repository,
+              function: Function.friendly.find(function_field_name.gsub(/_/, '-')),
+              description: row[function_field_name]
+            )
+          rescue Exception => e
+            LOG.error("Problem with repository row #{i} - missing function: #{function_id}")
+          end
+        end
+      end
+      # i = 1
+
+      ['writing_service', 'peer_review_service', 'commenting_service', 'revision_follow_up_service', 'endorsement_service', 'plagiarism_detection_service', 'metrics_service', 'indexing_service'].each do |field_name|
+        if !(row[field_name] == nil || row[field_name].casecmp?('No')) then
+          function_id = field_name[0..(field_name.index('_service') - 1)].gsub(/_/, '-')
+          service_ids = row[field_name].split(';')
+          service_ids.each do |service_id|
+            begin
+              Feature.create(
+                repository: repository,
+                function: Function.friendly.find(function_id),
+                service: Service.friendly.find(service_id)
+              )
+            rescue Exception => e
+              LOG.error("Problem with repository row #{i} - missing service: #{service_id} or function: #{function_id}")
+            end
+          end
+        end
+      end
+    else
+      LOG.warn("Repository with slug: #{row['slug']} not in preprints data source")
+    end
+  else
+    LOG.error("Repository with slug: #{row['slug']} not found")
+  end
+end
+LOG.info("Metadata added to repositories")
+
+LOG.debug("Joining repositories and disciplines...")
+
+CSV.foreach("#{source_data_folder_path}/Repositories_by_discipline-table_1.csv", { headers: true }).with_index(1) do |row, i|
   begin
-    repo = Repository.friendly.find(row['Repository ID'])
-    discipline = Discipline.friendly.find(row['Discipline ID'])
+    repo = Repository.friendly.find(row['repository'])
+    discipline = Discipline.friendly.find(row['discipline'])
     repo.disciplines << discipline
   rescue Exception => e
-    puts "problem with row #{i} - #{e.message}"
+    LOG.warn ("problem with row #{i} - #{row.inspect}")
   end
   i += 1
 end
+LOG.info("Repositories and disciplines joined")
+
+LOG.debug("Joining repositories and countries...")
+
+CSV.foreach("#{source_data_folder_path}/Repositories_by_country-table_1.csv", { headers: true }).with_index(1) do |row, i|
+  begin
+    repo = Repository.friendly.find(row['repository'])
+    country = Country.friendly.find(row['country'])
+    repo.countries << country
+  rescue Exception => e
+    LOG.error ("problem with row #{i} - #{row.inspect}")
+  end
+  i += 1
+end
+LOG.info("Repositories and countries joined")
+
+LOG.debug("Joining services and functions...")
+
+CSV.foreach("#{source_data_folder_path}/Services_by_function-table_1.csv", { headers: true }).with_index(1) do |row, i|
+  begin
+    service = Service.friendly.find(row['service'])
+    function = Function.friendly.find(row['function'])
+    service.functions << function
+  rescue Exception => e
+    LOG.error ("problem with row #{i} - #{row.inspect}")
+  end
+  i += 1
+end
+LOG.info("Services and functions joined")
+
+LOG.info("COMPLETED")

@@ -2,5 +2,5 @@ class Country < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  has_many :repositories
+  has_and_belongs_to_many :repositories
 end

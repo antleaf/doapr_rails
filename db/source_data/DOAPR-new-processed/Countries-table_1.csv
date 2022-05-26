@@ -1,0 +1,255 @@
+name,slug,code,latitude,longitude,continent
+Afghanistan,afghanistan,AF,33.93911,67.709953,Asia
+Åland,aland,AX,,,Europe
+Albania,albania,AL,41.153332,20.168331,Europe
+Algeria,algeria,DZ,28.033886,1.659626,Africa
+American Samoa,american-samoa,AS,-14.270972,-170.132217,Oceana
+Andorra,andorra,AD,42.546245,1.601554,Europe
+Angola,angola,AO,-11.202692,17.873887,Africa
+Anguilla,anguilla,AI,18.220554,-63.068615,North America
+Antarctica,antarctica,AQ,-75.250973,-0.071389,Antarctica
+Antigua and Barbuda,antigua-and-barbuda,AG,17.060816,-61.796428,North America
+Argentina,argentina,AR,-38.416097,-63.616672,South America
+Armenia,armenia,AM,40.069099,45.038189,Asia
+Aruba,aruba,AW,12.52111,-69.968338,North America
+Australia,australia,AU,-25.274398,133.775136,Oceana
+Austria,austria,AT,47.516231,14.550072,Europe
+Azerbaijan,azerbaijan,AZ,40.143105,47.576927,Asia
+Bahamas,bahamas,BS,25.03428,-77.39628,North America
+Bahrain,bahrain,BH,25.930414,50.637772,Asia
+Bangladesh,bangladesh,BD,23.684994,90.356331,Asia
+Barbados,barbados,BB,13.193887,-59.543198,North America
+Belarus,belarus,BY,53.709807,27.953389,Europe
+Belgium,belgium,BE,50.503887,4.469936,Europe
+Belize,belize,BZ,17.189877,-88.49765,North America
+Benin,benin,BJ,9.30769,2.315834,Africa
+Bermuda,bermuda,BM,32.321384,-64.75737,North America
+Bhutan,bhutan,BT,27.514162,90.433601,Asia
+Bolivia,bolivia,BO,-16.290154,-63.588653,South America
+Bonaire,bonaire,BQ,,,North America
+Bosnia and Herzegovina,bosnia-and-herzegovina,BA,43.915886,17.679076,Europe
+Botswana,botswana,BW,-22.328474,24.684866,Africa
+Bouvet Island,bouvet-island,BV,,,Antarctica
+Brazil,brazil,BR,-14.235004,-51.92528,South America
+British Indian Ocean Territory,british-indian-ocean-territory,IO,,,Asia
+British Virgin Islands,british-virgin-islands,VG,18.420695,-64.639968,North America
+Brunei,brunei,BN,4.535277,114.727669,Asia
+Bulgaria,bulgaria,BG,42.733883,25.48583,Europe
+Burkina Faso,burkina-faso,BF,12.238333,-1.561593,Africa
+Burundi,burundi,BI,-3.373056,29.918886,Africa
+Cambodia,cambodia,KH,12.565679,104.990963,Asia
+Cameroon,cameroon,CM,7.369722,12.354722,Africa
+Canada,canada,CA,56.130366,-106.346771,North America
+Cape Verde,cape-verde,CV,16.002082,-24.013197,Africa
+Cayman Islands,cayman-islands,KY,19.513469,-80.566956,North America
+Central African Republic,central-african-republic,CF,6.611111,20.939444,Africa
+Chad,chad,TD,15.454166,18.732207,Africa
+Chile,chile,CL,-35.675147,-71.542969,South America
+China,china,CN,35.86166,104.195397,Asia
+Christmas Island,christmas-island,CX,-10.447525,105.690449,Oceana
+Cocos [Keeling] Islands,cocos-keeling-islands,CC,-12.164165,96.870956,Asia
+Colombia,colombia,CO,4.570868,-74.297333,South America
+Comoros,comoros,KM,-11.875001,43.872219,Africa
+Cook Islands,cook-islands,CK,-21.236736,-159.777671,Oceana
+Costa Rica,costa-rica,CR,9.748917,-83.753428,North America
+Croatia,croatia,HR,45.1,15.2,Europe
+Cuba,cuba,CU,21.521757,-77.781167,North America
+Curacao,curacao,CW,,,North America
+Cyprus,cyprus,CY,35.126413,33.429859,Europe
+Czechia,czechia,CZ,49.817492,15.472962,Europe
+Democratic Republic of the Congo,democratic-republic-of-the-congo,CD,-4.038333,21.758664,Africa
+Denmark,denmark,DK,56.26392,9.501785,Europe
+Djibouti,djibouti,DJ,11.825138,42.590275,Africa
+Dominica,dominica,DM,15.414999,-61.370976,North America
+Dominican Republic,dominican-republic,DO,18.735693,-70.162651,North America
+East Timor,east-timor,TL,-8.874217,125.727539,Oceana
+Ecuador,ecuador,EC,-1.831239,-78.183406,South America
+Egypt,egypt,EG,26.820553,30.802498,Africa
+El Salvador,el-salvador,SV,13.794185,-88.89653,North America
+Equatorial Guinea,equatorial-guinea,GQ,1.650801,10.267895,Africa
+Eritrea,eritrea,ER,15.179384,39.782334,Africa
+Estonia,estonia,EE,58.595272,25.013607,Europe
+Ethiopia,ethiopia,ET,9.145,40.489673,Africa
+Falkland Islands,falkland-islands,FK,-51.796253,-59.523613,South America
+Faroe Islands,faroe-islands,FO,61.892635,-6.911806,Europe
+Fiji,fiji,FJ,-16.578193,179.414413,Oceana
+Finland,finland,FI,61.92411,25.748151,Europe
+France,france,FR,46.227638,2.213749,Europe
+French Guiana,french-guiana,GF,,,South America
+French Polynesia,french-polynesia,PF,-17.679742,-149.406843,Oceana
+French Southern Territories,french-southern-territories,TF,-49.280366,69.348557,Antarctica
+Gabon,gabon,GA,-0.803689,11.609444,Africa
+Gambia,gambia,GM,13.443182,-15.310139,Africa
+Gaza Strip,gaza-strip,GZ,,,Europe
+Georgia,georgia,GE,42.315407,43.356892,Asia
+Germany,germany,DE,51.165691,10.451526,Europe
+Ghana,ghana,GH,7.946527,-1.023194,Africa
+Gibraltar,gibraltar,GI,36.137741,-5.345374,Europe
+Greece,greece,GR,39.074208,21.824312,Europe
+Greenland,greenland,GL,71.706936,-42.604303,North America
+Grenada,grenada,GD,12.262776,-61.604171,North America
+Guadeloupe,guadeloupe,GP,16.995971,-62.067641,North America
+Guam,guam,GU,13.444304,144.793731,Oceana
+Guatemala,guatemala,GT,15.783471,-90.230759,North America
+Guernsey,guernsey,GG,49.465691,-2.585278,Europe
+Guinea,guinea,GN,9.945587,-9.696645,Africa
+Guinea-Bissau,guinea-bissau,GW,11.803749,-15.180413,Africa
+Guyana,guyana,GY,4.860416,-58.93018,South America
+Haiti,haiti,HT,18.971187,-72.285215,North America
+Heard Island and McDonald Islands,heard-island-and-mcdonald-islands,HM,,,Antarctica
+Honduras,honduras,HN,15.199999,-86.241905,North America
+Hong Kong,hong-kong,HK,22.396428,114.109497,Asia
+Hungary,hungary,HU,47.162494,19.503304,Europe
+Iceland,iceland,IS,64.963051,-19.020835,Europe
+India,india,IN,20.593684,78.96288,Asia
+Indonesia,indonesia,ID,-0.789275,113.921327,Asia
+Iran,iran,IR,32.427908,53.688046,Asia
+Iraq,iraq,IQ,33.223191,43.679291,Asia
+Ireland,ireland,IE,53.41291,-8.24389,Europe
+Isle of Man,isle-of-man,IM,54.236107,-4.548056,Europe
+Israel,israel,IL,31.046051,34.851612,Asia
+Italy,italy,IT,41.87194,12.56738,Europe
+Ivory Coast,ivory-coast,CI,7.539989,-5.54708,Africa
+Jamaica,jamaica,JM,18.109581,-77.297508,North America
+Japan,japan,JP,36.204824,138.252924,Asia
+Jersey,jersey,JE,49.214439,-2.13125,Europe
+Jordan,jordan,JO,30.585164,36.238414,Asia
+Kazakhstan,kazakhstan,KZ,48.019573,66.923684,Asia
+Kenya,kenya,KE,-0.023559,37.906193,Africa
+Kiribati,kiribati,KI,-3.370417,-168.734039,Oceana
+Kosovo,kosovo,XK,42.602636,20.902977,Europe
+Kuwait,kuwait,KW,29.31166,47.481766,Asia
+Kyrgyzstan,kyrgyzstan,KG,41.20438,74.766098,Asia
+Laos,laos,LA,19.85627,102.495496,Asia
+Latvia,latvia,LV,56.879635,24.603189,Europe
+Lebanon,lebanon,LB,33.854721,35.862285,Asia
+Lesotho,lesotho,LS,-29.609988,28.233608,Africa
+Liberia,liberia,LR,6.428055,-9.429499,Africa
+Libya,libya,LY,26.3351,17.228331,Africa
+Liechtenstein,liechtenstein,LI,47.166,9.555373,Europe
+Lithuania,lithuania,LT,55.169438,23.881275,Europe
+Luxembourg,luxembourg,LU,49.815273,6.129583,Europe
+Macao,macao,MO,22.198745,113.543873,Asia
+Macedonia,macedonia,MK,41.608635,21.745275,Europe
+Madagascar,madagascar,MG,-18.766947,46.869107,Africa
+Malawi,malawi,MW,-13.254308,34.301525,Africa
+Malaysia,malaysia,MY,4.210484,101.975766,Asia
+Maldives,maldives,MV,3.202778,73.22068,Asia
+Mali,mali,ML,17.570692,-3.996166,Africa
+Malta,malta,MT,35.937496,14.375416,Europe
+Marshall Islands,marshall-islands,MH,7.131474,171.184478,Oceana
+Martinique,martinique,MQ,14.641528,-61.024174,North America
+Mauritania,mauritania,MR,21.00789,-10.940835,Africa
+Mauritius,mauritius,MU,-20.348404,57.552152,Africa
+Mayotte,mayotte,YT,-12.8275,45.166244,Africa
+Mexico,mexico,MX,23.634501,-102.552784,North America
+Micronesia,micronesia,FM,7.425554,150.550812,Oceana
+Moldova,moldova,MD,47.411631,28.369885,Europe
+Monaco,monaco,MC,43.750298,7.412841,Europe
+Mongolia,mongolia,MN,46.862496,103.846656,Asia
+Montenegro,montenegro,ME,42.708678,19.37439,Europe
+Montserrat,montserrat,MS,16.742498,-62.187366,North America
+Morocco,morocco,MA,31.791702,-7.09262,Africa
+Mozambique,mozambique,MZ,-18.665695,35.529562,Africa
+Myanmar [Burma],myanmar-burma,MM,21.913965,95.956223,Asia
+Namibia,namibia,NA,-22.95764,18.49041,Africa
+Nauru,nauru,NR,-0.522778,166.931503,Oceana
+Nepal,nepal,NP,28.394857,84.124008,Asia
+Netherlands,netherlands,NL,52.132633,5.291266,Europe
+Netherlands Antilles,netherlands-antilles,AN,12.226079,-69.060087,North America
+New Caledonia,new-caledonia,NC,-20.904305,165.618042,Oceana
+New Zealand,new-zealand,NZ,-40.900557,174.885971,Oceana
+Nicaragua,nicaragua,NI,12.865416,-85.207229,North America
+Niger,niger,NE,17.607789,8.081666,Africa
+Nigeria,nigeria,NG,9.081999,8.675277,Africa
+Niue,niue,NU,-19.054445,-169.867233,Oceana
+Norfolk Island,norfolk-island,NF,-29.040835,167.954712,Oceana
+North Korea,north-korea,KP,40.339852,127.510093,Asia
+Northern Mariana Islands,northern-mariana-islands,MP,17.33083,145.38469,Oceana
+Norway,norway,NO,60.472024,8.468946,Europe
+Oman,oman,OM,21.512583,55.923255,Asia
+Pakistan,pakistan,PK,30.375321,69.345116,Asia
+Palau,palau,PW,7.51498,134.58252,Oceana
+Palestine,palestine,PS,31.952162,35.233154,Asia
+Panama,panama,PA,8.537981,-80.782127,North America
+Papua New Guinea,papua-new-guinea,PG,-6.314993,143.95555,Oceana
+Paraguay,paraguay,PY,-23.442503,-58.443832,South America
+Peru,peru,PE,-9.189967,-75.015152,South America
+Philippines,philippines,PH,12.879721,121.774017,Asia
+Pitcairn Islands,pitcairn-islands,PN,-24.703615,-127.439308,Oceana
+Poland,poland,PL,51.919438,19.145136,Europe
+Portugal,portugal,PT,39.399872,-8.224454,Europe
+Puerto Rico,puerto-rico,PR,18.220833,-66.590149,North America
+Qatar,qatar,QA,25.354826,51.183884,Asia
+Republic of the Congo,republic-of-the-congo,CG,-0.228021,15.827659,Africa
+Réunion,reunion,RE,,,Africa
+Romania,romania,RO,45.943161,24.96676,Europe
+Russia,russia,RU,61.52401,105.318756,Europe
+Rwanda,rwanda,RW,-1.940278,29.873888,Africa
+Saint Barthélemy,saint-barthelemy,BL,,,North America
+Saint Helena,saint-helena,SH,-24.143474,-10.030696,Africa
+Saint Kitts and Nevis,saint-kitts-and-nevis,KN,17.357822,-62.782998,North America
+Saint Lucia,saint-lucia,LC,13.909444,-60.978893,North America
+Saint Martin,saint-martin,MF,,,North America
+Saint Pierre and Miquelon,saint-pierre-and-miquelon,PM,,,North America
+Saint Vincent and the Grenadines,saint-vincent-and-the-grenadines,VC,12.984305,-61.287228,North America
+Samoa,samoa,WS,-13.759029,-172.104629,Oceana
+San Marino,san-marino,SM,43.94236,12.457777,Europe
+São Tomé and Príncipe,sao-tome-and-principe,ST,0.18636,6.613081,Africa
+Saudi Arabia,saudi-arabia,SA,23.885942,45.079162,Asia
+Senegal,senegal,SN,14.497401,-14.452362,Africa
+Serbia,serbia,RS,44.016521,21.005859,Europe
+Serbia and Montenegro,serbia-and-montenegro,CS,,,Europe
+Seychelles,seychelles,SC,-4.679574,55.491977,Africa
+Sierra Leone,sierra-leone,SL,8.460555,-11.779889,Africa
+Singapore,singapore,SG,1.352083,103.819836,Asia
+Sint Maarten,sint-maarten,SX,,,North America
+Slovakia,slovakia,SK,48.669026,19.699024,Europe
+Slovenia,slovenia,SI,46.151241,14.995463,Europe
+Solomon Islands,solomon-islands,SB,-9.64571,160.156194,Oceana
+Somalia,somalia,SO,5.152149,46.199616,Africa
+South Africa,south-africa,ZA,-30.559482,22.937506,Africa
+South Georgia and the South Sandwich Islands,south-georgia-and-the-south-sandwich-islands,GS,-54.429579,-36.587909,Antarctica
+South Korea,south-korea,KR,35.907757,127.766922,Asia
+South Sudan,south-sudan,SS,,,Africa
+Spain,spain,ES,40.463667,-3.74922,Europe
+Sri Lanka,sri-lanka,LK,7.873054,80.771797,Asia
+Sudan,sudan,SD,12.862807,30.217636,Africa
+Suriname,suriname,SR,3.919305,-56.027783,South America
+Svalbard and Jan Mayen,svalbard-and-jan-mayen,SJ,,,Europe
+Swaziland,swaziland,SZ,-26.522503,31.465866,Africa
+Sweden,sweden,SE,60.128161,18.643501,Europe
+Switzerland,switzerland,CH,46.818188,8.227512,Europe
+Syria,syria,SY,34.802075,38.996815,Asia
+Taiwan,taiwan,TW,23.69781,120.960515,Asia
+Tajikistan,tajikistan,TJ,38.861034,71.276093,Asia
+Tanzania,tanzania,TZ,-6.369028,34.888822,Africa
+Thailand,thailand,TH,15.870032,100.992541,Asia
+Togo,togo,TG,8.619543,0.824782,Africa
+Tokelau,tokelau,TK,-8.967363,-171.855881,Oceana
+Tonga,tonga,TO,-21.178986,-175.198242,Oceana
+Trinidad and Tobago,trinidad-and-tobago,TT,10.691803,-61.222503,North America
+Tunisia,tunisia,TN,33.886917,9.537499,Africa
+Turkey,turkey,TR,38.963745,35.243322,Asia
+Turkmenistan,turkmenistan,TM,38.969719,59.556278,Asia
+Turks and Caicos Islands,turks-and-caicos-islands,TC,21.694025,-71.797928,North America
+Tuvalu,tuvalu,TV,-7.109535,177.64933,Oceana
+U.S. Minor Outlying Islands,u-s-minor-outlying-islands,UM,,,Oceana
+U.S. Virgin Islands,u-s-virgin-islands,VI,18.335765,-64.896335,North America
+Uganda,uganda,UG,1.373333,32.290275,Africa
+Ukraine,ukraine,UA,48.379433,31.16558,Europe
+United Arab Emirates,united-arab-emirates,AE,23.424076,53.847818,Asia
+United Kingdom,united-kingdom,GB,55.378051,-3.435973,Europe
+United States,united-states,US,37.09024,-95.712891,North America
+Uruguay,uruguay,UY,-32.522779,-55.765835,South America
+Uzbekistan,uzbekistan,UZ,41.377491,64.585262,Asia
+Vanuatu,vanuatu,VU,-15.376706,166.959158,Oceana
+Vatican City,vatican-city,VA,41.902916,12.453389,Europe
+Venezuela,venezuela,VE,6.42375,-66.58973,South America
+Vietnam,vietnam,VN,14.058324,108.277199,Asia
+Wallis and Futuna,wallis-and-futuna,WF,-13.768752,-177.156097,Oceana
+Western Sahara,western-sahara,EH,24.215527,-12.885834,Africa
+Yemen,yemen,YE,15.552727,48.516388,Asia
+Zambia,zambia,ZM,-13.133897,27.849332,Africa
+Zimbabwe,zimbabwe,ZW,-19.015438,29.154857,Africa
+European Union,european-union,,,,Europe

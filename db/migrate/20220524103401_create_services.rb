@@ -7,6 +7,7 @@ class CreateServices < ActiveRecord::Migration[7.0]
       t.integer :cost
       t.string :slug
       t.text :editorial
+      # t.references :function, null: true, foreign_key: true
 
       t.timestamps
     end

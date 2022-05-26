@@ -43,7 +43,6 @@ class CreateRepositories < ActiveRecord::Migration[7.0]
       t.string :objectives
       t.string :open_source
       t.string :opendoar_id
-      t.references :country, null: true, foreign_key: true
       t.string :owner_full_name
       t.string :owner_short_name
       t.string :owner_url
@@ -52,7 +51,7 @@ class CreateRepositories < ActiveRecord::Migration[7.0]
       t.string :permission_for_re_use_of_metadata
       t.string :persistence_of_content
       t.string :persistent_identifier
-      t.references :platform, null: true, foreign_key: true
+      t.string :platform
       t.string :platform_languages
       t.string :preservation_policy
       t.string :record_count

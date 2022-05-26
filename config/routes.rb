@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  resources :features
   resources :services
   resources :functions
   resources :countries
-  resources :platforms
   resources :statuses
   resources :business_models
   resources :repositories
