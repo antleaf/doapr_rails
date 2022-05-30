@@ -1,15 +1,22 @@
-%p#notice= notice
+%h4.page-title
+  != "Business Model: <i>#{@business_model.name}</i>"
+%table.invisible-layout-table
+  %tr
+    %td.field-name Name:
+    %td
+      = @business_model.name
+  %tr
+    %td.field-name Description:
+    %td
+      = @business_model.description
+- if policy(BusinessModel).edit?
+  = link_to 'Edit', edit_business_model_path(@business_model), :class => "btn btn-secondary btn-sm"
+%hr
+%h5
+  !="Repositories supporting the business model: <i>#{@business_model.name}</i>"
 
-%p
-  %b Name:
-  = @business_model.name
-%p
-  %b Description:
-  = @business_model.description
-%p
-  %b Slug:
-  = @business_model.slug
+= render(:partial => 'repositories/table',:locals => {:repository_list => @business_model.repositories})
 
-= link_to 'Edit', edit_business_model_path(@business_model)
-\|
-= link_to 'Back', business_models_path
+
+
+

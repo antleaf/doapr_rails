@@ -60,7 +60,7 @@ class ServicesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_service
-      @service = Service.find(params[:id])
+      @service = Service.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

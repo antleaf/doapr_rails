@@ -1,0 +1,25 @@
+%table{:class=>"sorted-table table table-condensed table-striped"}
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Repositories
+      - if (policy(BusinessModel).edit?)|(policy(BusinessModel).destroy?)
+        %th.actions Actions
+  %tbody
+    - business_model_list.each do |business_model|
+      %tr
+        %td.no-wrap
+          %div.hover-over{style:"width:100%;"}
+            = link_to business_model.name,business_model
+        %td
+          =business_model.description
+        %td=business_model.repositories.count
+        - if (policy(BusinessModel).edit?)|(policy(BusinessModel).destroy?)
+          %td.actions
+            - if policy(BusinessModel).edit?
+              -# = link_to image_tag('icons/edit.png',alt: 'Edit', title: 'Edit'),edit_country_path(country)
+              = link_to 'Edit', edit_business_model_path(business_model), :class => "btn btn-secondary btn-sm"
+            - if policy(BusinessModel).destroy?
+              -# = link_to image_tag('icons/delete.png',alt: 'Delete', title: 'Delete'), country, method: :delete, data: { confirm: 'Are you sure?' }
+              = link_to 'Delete', business_model, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-secondary btn-sm"

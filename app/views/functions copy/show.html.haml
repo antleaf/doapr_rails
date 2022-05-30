@@ -9,17 +9,13 @@
     %td.field-name Description:
     %td
       = @service.description
-  %tr
-    %td.field-name URL:
-    %td
-      = auto_link @service.url
-  %tr
-    %td.field-name Cost:
-    %td
-      = @service.cost_name
 - if policy(Service).edit?
   = link_to 'Edit', edit_service_path(@service), :class => "btn btn-secondary btn-sm"
 %hr
 %h5
-  !="Repositories using this service: <i>#{@service.name}</i>"
+  !="Repositories with this service: <i>#{@service.name}</i>"
 = render(:partial => 'repositories/table',:locals => {:repository_list => @service.repositories})
+
+
+
+

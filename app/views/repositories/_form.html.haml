@@ -5,219 +5,384 @@
       %ul
         - @repository.errors.full_messages.each do |message|
           %li= message
+  %ul{class:"nav nav-pills mb-3", id:"pills-tab", role:"tablist"}
+    %li{class: "nav-item", role:"presentation"}
+      %button{class:"nav-link active", id:"pills-home-tab", "data-bs-toggle":"pill", "data-bs-target":"#pills-home", type:"button", role:"tab","aria-controls":"pills-home", "aria-selected":"true"} General
+    %li{class: "nav-item", role:"presentation"}
+      %button{class:"nav-link", id:"pills-governance-tab", "data-bs-toggle":"pill", "data-bs-target":"#pills-governance", type:"button", role:"tab","aria-controls":"pills-governance", "aria-selected":"true"} Governance
+    %li{class: "nav-item", role:"presentation"}
+      %button{class:"nav-link", id:"pills-features-tab", "data-bs-toggle":"pill", "data-bs-target":"#pills-features", type:"button", role:"tab","aria-controls":"pills-features", "aria-selected":"true"} Features &amp; Functions
+    %li{class: "nav-item", role:"presentation"}
+      %button{class:"nav-link", id:"pills-editorial-tab", "data-bs-toggle":"pill", "data-bs-target":"#pills-editorial", type:"button", role:"tab","aria-controls":"pills-editorial", "aria-selected":"true"} Editorial Process
+  %div.tab-content#pills-tabContent
+    %div{class:"tab-pane fade show active", id:"pills-home",role:"tabpanel","aria-labelledby":"pills-home-tab",style:"background-color: #def3fd;"}
+      %table.invisible-layout-table
+        %tr
+          %td.field-name
+            url:
+          %td.field-value
+            = f.text_field :url
+        %tr
+          %td.field-name
+            full_name:
+          %td.field-value
+            = f.text_field :full_name
+        %tr
+          %td.field-name
+            short_name:
+          %td.field-value
+            = f.text_field :short_name
+        %tr
+          %td.field-name
+            description:
+          %td.field-value
+            = f.text_field :description
+        %tr
+          %td.field-name
+            accepted_content_types:
+          %td.field-value
+            = f.text_field :accepted_content_types
+    %div{class:"tab-pane fade", id:"pills-governance",role:"tabpanel","aria-labelledby":"pills-governance-tab",style:"background-color: #fcf7de;"}
+      %table.invisible-layout-table
+        %tr
+          %td.field-name
+            accessibility_of_conflict_of_interest_procedures:
+          %td.field-value
+            = f.text_field :accessibility_of_conflict_of_interest_procedures
+        %tr
+          %td.field-name
+            Business Model:
+          %td.field-value
+            - if @repository.new_record?
+              = f.select "business_model_id", options_from_collection_for_select(BusinessModel.all, "id", "name",1)
+            - else
+              = f.select "business_model_id", options_from_collection_for_select(BusinessModel.all, "id", "name", @repository.business_model.id)
 
-  .field
-    = f.label :academic_applicant_only
-    = f.text_field :academic_applicant_only
-  .field
-    = f.label :accepted_content_formats
-    = f.text_field :accepted_content_formats
-  .field
-    = f.label :accepted_content_languages
-    = f.text_field :accepted_content_languages
-  .field
-    = f.label :accepted_content_level
-    = f.text_field :accepted_content_level
-  .field
-    = f.label :accepted_content_types
-    = f.text_field :accepted_content_types
-  .field
-    = f.label :accepted_supplementary_content
-    = f.text_field :accepted_supplementary_content
-  .field
-    = f.label :access_to_content
-    = f.text_field :access_to_content
-  .field
-    = f.label :access_to_metadata
-    = f.text_field :access_to_metadata
-  .field
-    = f.label :accessibility_of_conflict_of_interest_procedures
-    = f.text_field :accessibility_of_conflict_of_interest_procedures
-  .field
-    = f.label :account_creation
-    = f.text_field :account_creation
-  .field
-    = f.label :associated_editor
-    = f.text_field :associated_editor
-  .field
-    = f.label :associated_journal
-    = f.text_field :associated_journal
-  .field
-    = f.label :author_pid
-    = f.text_field :author_pid
-  .field
-    = f.label :availability_of_associated_content
-    = f.text_field :availability_of_associated_content
-  .field
-    = f.label :backups
-    = f.text_field :backups
-  .field
-    = f.label :business_model
-    = f.text_field :business_model
-  .field
-    = f.label :certificate_or_labels
-    = f.text_field :certificate_or_labels
-  .field
-    = f.label :closure_date
-    = f.text_field :closure_date
-  .field
-    = f.label :contact
-    = f.text_field :contact
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :disciplinary_scope
-    = f.text_field :disciplinary_scope
-  .field
-    = f.label :editorial_notes
-    = f.text_field :editorial_notes
-  .field
-    = f.label :full_name
-    = f.text_field :full_name
-  .field
-    = f.label :functional_description
-    = f.text_field :functional_description
-  .field
-    = f.label :funding
-    = f.text_field :funding
-  .field
-    = f.label :interoperability
-    = f.text_field :interoperability
-  .field
-    = f.label :journal_submission
-    = f.text_field :journal_submission
-  .field
-    = f.label :keywords
-    = f.text_field :keywords
-  .field
-    = f.label :last_update
-    = f.text_field :last_update
-  .field
-    = f.label :launch_date
-    = f.text_field :launch_date
-  .field
-    = f.label :licensing
-    = f.text_field :licensing
-  .field
-    = f.label :mechanisms_to_report_concerns_about_content
-    = f.text_field :mechanisms_to_report_concerns_about_content
-  .field
-    = f.label :mechanisms_to_report_concerns_about_plagiarism
-    = f.text_field :mechanisms_to_report_concerns_about_plagiarism
-  .field
-    = f.label :metadata_formats
-    = f.text_field :metadata_formats
-  .field
-    = f.label :metadata_languages
-    = f.text_field :metadata_languages
-  .field
-    = f.label :metadata_properties
-    = f.text_field :metadata_properties
-  .field
-    = f.label :method_for_reuse_of_metadata
-    = f.text_field :method_for_reuse_of_metadata
-  .field
-    = f.label :moderation
-    = f.text_field :moderation
-  .field
-    = f.label :oai_pmh_url
-    = f.text_field :oai_pmh_url
-  .field
-    = f.label :objectives
-    = f.text_field :objectives
-  .field
-    = f.label :open_source
-    = f.text_field :open_source
-  .field
-    = f.label :opendoar_id
-    = f.text_field :opendoar_id
-  .field
-    = f.label :owner_country
-    = f.text_field :owner_country
-  .field
-    = f.label :owner_full_name
-    = f.text_field :owner_full_name
-  .field
-    = f.label :owner_short_name
-    = f.text_field :owner_short_name
-  .field
-    = f.label :owner_url
-    = f.text_field :owner_url
-  .field
-    = f.label :ownership_type
-    = f.text_field :ownership_type
-  .field
-    = f.label :peer_review_status_indication
-    = f.text_field :peer_review_status_indication
-  .field
-    = f.label :permission_for_re_use_of_metadata
-    = f.text_field :permission_for_re_use_of_metadata
-  .field
-    = f.label :persistence_of_content
-    = f.text_field :persistence_of_content
-  .field
-    = f.label :persistent_identifier
-    = f.text_field :persistent_identifier
-  .field
-    = f.label :platform
-    = f.text_field :platform
-  .field
-    = f.label :platform_languages
-    = f.text_field :platform_languages
-  .field
-    = f.label :preservation_policy
-    = f.text_field :preservation_policy
-  .field
-    = f.label :record_count
-    = f.text_field :record_count
-  .field
-    = f.label :remining_indrawn_item
-    = f.text_field :remining_indrawn_item
-  .field
-    = f.label :repository_type
-    = f.text_field :repository_type
-  .field
-    = f.label :scientific_technical_committees
-    = f.text_field :scientific_technical_committees
-  .field
-    = f.label :service_pricing
-    = f.text_field :service_pricing
-  .field
-    = f.label :short_name
-    = f.text_field :short_name
-  .field
-    = f.label :status
-    = f.text_field :status
-  .field
-    = f.label :terms_of_use
-    = f.text_field :terms_of_use
-  .field
-    = f.label :text_embargo
-    = f.text_field :text_embargo
-  .field
-    = f.label :time_from_submission_to_posting
-    = f.text_field :time_from_submission_to_posting
-  .field
-    = f.label :url
-    = f.text_field :url
-  .field
-    = f.label :user_committees
-    = f.text_field :user_committees
-  .field
-    = f.label :versioning_policy
-    = f.text_field :versioning_policy
-  .field
-    = f.label :who_can_deposit
-    = f.text_field :who_can_deposit
-  .field
-    = f.label :withdrawal_authorisation
-    = f.text_field :withdrawal_authorisation
-  .field
-    = f.label :withdrawal_policy
-    = f.text_field :withdrawal_policy
-  .field
-    = f.label :slug
-    = f.text_field :slug
+
+
+      %table.invisible-layout-table
+        %tr
+          %td.field-name
+            academic_applicant_only:
+          %td.field-value
+            = f.text_field :academic_applicant_only
+        %tr
+          %td.field-name
+            accepted_content_formats:
+          %td.field-value
+            = f.text_field :accepted_content_formats
+        %tr
+          %td.field-name
+            accepted_content_languages:
+          %td.field-value
+            = f.text_field :accepted_content_languages
+        %tr
+          %td.field-name
+            accepted_content_level:
+          %td.field-value
+            = f.text_field :accepted_content_level
+
+        %tr
+          %td.field-name
+            accepted_supplementary_content:
+          %td.field-value
+            = f.text_field :accepted_supplementary_content
+        %tr
+          %td.field-name
+            access_to_content:
+          %td.field-value
+            = f.text_field :access_to_content
+        %tr
+          %td.field-name
+            access_to_metadata:
+          %td.field-value
+            = f.text_field :access_to_metadata
+
+        %tr
+          %td.field-name
+            account_creation:
+          %td.field-value
+            = f.text_field :account_creation
+        %tr
+          %td.field-name
+            associated_editor:
+          %td.field-value
+            = f.text_field :associated_editor
+        %tr
+          %td.field-name
+            associated_journal:
+          %td.field-value
+            = f.text_field :associated_journal
+        %tr
+          %td.field-name
+            author_pid:
+          %td.field-value
+            = f.text_field :author_pid
+        %tr
+          %td.field-name
+            availability_of_associated_content:
+          %td.field-value
+            = f.text_field :availability_of_associated_content
+        %tr
+          %td.field-name
+            backups:
+          %td.field-value
+            = f.text_field :backups
+
+        %tr
+          %td.field-name
+            certificate_or_labels:
+          %td.field-value
+            = f.text_field :certificate_or_labels
+        %tr
+          %td.field-name
+            closure_date:
+          %td.field-value
+            = f.text_field :closure_date
+        %tr
+          %td.field-name
+            contact:
+          %td.field-value
+            = f.text_field :contact
+        %tr
+          %td.field-name
+            disciplinary_scope:
+          %td.field-value
+            = f.text_field :disciplinary_scope
+        %tr
+          %td.field-name
+            editorial_notes:
+          %td.field-value
+            = f.text_field :editorial_notes
+        %tr
+          %td.field-name
+            functional_description:
+          %td.field-value
+            = f.text_field :functional_description
+        %tr
+          %td.field-name
+            funding:
+          %td.field-value
+            = f.text_field :funding
+        %tr
+          %td.field-name
+            interoperability:
+          %td.field-value
+            = f.text_field :interoperability
+        %tr
+          %td.field-name
+            journal_submission:
+          %td.field-value
+            = f.text_field :journal_submission
+        %tr
+          %td.field-name
+            keywords:
+          %td.field-value
+            = f.text_field :keywords
+        %tr
+          %td.field-name
+            last_update:
+          %td.field-value
+            = f.text_field :last_update
+        %tr
+          %td.field-name
+            launch_date:
+          %td.field-value
+            = f.text_field :launch_date
+        %tr
+          %td.field-name
+            licensing:
+          %td.field-value
+            = f.text_field :licensing
+        %tr
+          %td.field-name
+            mechanisms_to_report_concerns_about_content:
+          %td.field-value
+            = f.text_field :mechanisms_to_report_concerns_about_content
+        %tr
+          %td.field-name
+            mechanisms_to_report_concerns_about_plagiarism:
+          %td.field-value
+            = f.text_field :mechanisms_to_report_concerns_about_plagiarism
+        %tr
+          %td.field-name
+            metadata_formats:
+          %td.field-value
+            = f.text_field :metadata_formats
+        %tr
+          %td.field-name
+            metadata_languages:
+          %td.field-value
+            = f.text_field :metadata_languages
+        %tr
+          %td.field-name
+            metadata_properties:
+          %td.field-value
+            = f.text_field :metadata_properties
+        %tr
+          %td.field-name
+            method_for_reuse_of_metadata:
+          %td.field-value
+            = f.text_field :method_for_reuse_of_metadata
+        %tr
+          %td.field-name
+            moderation:
+          %td.field-value
+            = f.text_field :moderation
+        %tr
+          %td.field-name
+            oai_pmh_url:
+          %td.field-value
+            = f.text_field :oai_pmh_url
+        %tr
+          %td.field-name
+            objectives:
+          %td.field-value
+            = f.text_field :objectives
+        %tr
+          %td.field-name
+            open_source:
+          %td.field-value
+            = f.text_field :open_source
+        %tr
+          %td.field-name
+            opendoar_id:
+          %td.field-value
+            = f.text_field :opendoar_id
+        %tr
+          %td.field-name
+            Country:
+          %td.field-value
+            TODO
+        %tr
+          %td.field-name
+            owner_full_name:
+          %td.field-value
+            = f.text_field :owner_full_name
+        %tr
+          %td.field-name
+            owner_short_name:
+          %td.field-value
+            = f.text_field :owner_short_name
+        %tr
+          %td.field-name
+            owner_url:
+          %td.field-value
+            = f.text_field :owner_url
+        %tr
+          %td.field-name
+            ownership_type:
+          %td.field-value
+            = f.text_field :ownership_type
+        %tr
+          %td.field-name
+            peer_review_status_indication:
+          %td.field-value
+            = f.text_field :peer_review_status_indication
+        %tr
+          %td.field-name
+            permission_for_re_use_of_metadata:
+          %td.field-value
+            = f.text_field :permission_for_re_use_of_metadata
+        %tr
+          %td.field-name
+            persistence_of_content:
+          %td.field-value
+            = f.text_field :persistence_of_content
+        %tr
+          %td.field-name
+            persistent_identifier:
+          %td.field-value
+            = f.text_field :persistent_identifier
+        %tr
+          %td.field-name
+            platform:
+          %td.field-value
+            = f.text_field :platform
+        %tr
+          %td.field-name
+            platform_languages:
+          %td.field-value
+            = f.text_field :platform_languages
+        %tr
+          %td.field-name
+            preservation_policy:
+          %td.field-value
+            = f.text_field :preservation_policy
+        %tr
+          %td.field-name
+            record_count:
+          %td.field-value
+            = f.text_field :record_count
+        %tr
+          %td.field-name
+            remining_indrawn_item:
+          %td.field-value
+            = f.text_field :remining_indrawn_item
+        %tr
+          %td.field-name
+            repository_type:
+          %td.field-value
+            = f.text_field :repository_type
+        %tr
+          %td.field-name
+            scientific_technical_committees:
+          %td.field-value
+            = f.text_field :scientific_technical_committees
+        %tr
+          %td.field-name
+            service_pricing:
+          %td.field-value
+            = f.text_field :service_pricing
+
+        %tr
+          %td.field-name
+            Status:
+          %td.field-value
+            - if @repository.new_record?
+              = f.select "status_id", options_from_collection_for_select(Status.all, "id", "name",1)
+            - else
+              = f.select "status_id", options_from_collection_for_select(Status.all, "id", "name", @repository.status.id)
+        %tr
+          %td.field-name
+            terms_of_use:
+          %td.field-value
+            = f.text_field :terms_of_use
+        %tr
+          %td.field-name
+            text_embargo:
+          %td.field-value
+            = f.text_field :text_embargo
+        %tr
+          %td.field-name
+            time_from_submission_to_posting:
+          %td.field-value
+            = f.text_field :time_from_submission_to_posting
+        %tr
+          %td.field-name
+            user_committees:
+          %td.field-value
+            = f.text_field :user_committees
+        %tr
+          %td.field-name
+            versioning_policy:
+          %td.field-value
+            = f.text_field :versioning_policy
+        %tr
+          %td.field-name
+            who_can_deposit:
+          %td.field-value
+            = f.text_field :who_can_deposit
+        %tr
+          %td.field-name
+            withdrawal_authorisation:
+          %td.field-value
+            = f.text_field :withdrawal_authorisation
+        %tr
+          %td.field-name
+            withdrawal_policy:
+          %td.field-value
+            = f.text_field :withdrawal_policy
   .actions
-    = f.submit 'Save'
+    = link_to 'Cancel', @repository, :class => "btn btn-secondary btn-sm"
+    = f.submit 'Save', :class => 'btn btn-success btn-sm'

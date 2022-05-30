@@ -1,8 +1,13 @@
 %h4.page-title
   != "Discipline: <i>#{@discipline.name}</i>"
+%table.invisible-layout-table
+  %tr
+    %td.field-name Name:
+    %td
+      = @discipline.name
 - if policy(Discipline).edit?
   = link_to 'Edit', edit_discipline_path(@discipline), :class => "btn btn-secondary btn-sm"
-%br
+%hr
 %h5
   !="Repositories supporting the discipline: <i>#{@discipline.name}</i>"
 

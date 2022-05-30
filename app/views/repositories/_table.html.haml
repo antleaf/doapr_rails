@@ -2,7 +2,7 @@
   %thead
     %tr
       %th Name
-      %th Owner
+      %th Description
       - if (policy(Repository).edit?)|(policy(Repository).destroy?)
         %th.actions Actions
   %tbody
@@ -13,7 +13,7 @@
             = link_to repository.full_name,repository
             %span.hover-over-text= repository.description
         %td
-          =auto_link repository.owner_full_name
+          =auto_link repository.description
         - if (policy(Repository).edit?)|(policy(Repository).destroy?)
           %td.actions
             - if policy(Repository).edit?

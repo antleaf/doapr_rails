@@ -13,22 +13,10 @@
 %div.row
   %div.col
     - flash.each do |type, msg|
-      %div{:class => 'alert alert-danger',:role => 'alert'}
+      %div{:class => 'alert alert-info',:role => 'alert'}
         = msg
 %hr
 %div.row
   %div.col
-    = link_to 'Disciplines', disciplines_url
-    |
-    = link_to 'Repositories', repositories_url
-    |
-    = link_to 'Business Models', business_models_url
-    |
-    = link_to 'Statuses', statuses_url
-    |
-    = link_to 'Platforms', platforms_url
-    |
-    = link_to 'Countries', countries_url
-    |
-    = link_to 'About', about_url
+    = render(:partial => '_partials/navbar')
 %hr

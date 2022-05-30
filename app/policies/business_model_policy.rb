@@ -1,0 +1,3 @@
+class BusinessModelPolicy < ApplicationPolicy
+
+end

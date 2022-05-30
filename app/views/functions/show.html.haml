@@ -1,15 +1,21 @@
-%p#notice= notice
+%h4.page-title
+  != "Function: <i>#{@function.name}</i>"
+%table.invisible-layout-table
+  %tr
+    %td.field-name Name:
+    %td
+      = @function.name
+  %tr
+    %td.field-name Description:
+    %td
+      = @function.description
+- if policy(Function).edit?
+  = link_to 'Edit', edit_function_path(@function), :class => "btn btn-secondary btn-sm"
+%hr
+%h5
+  !="Repositories with this function: <i>#{@function.name}</i>"
+= render(:partial => 'repositories/table',:locals => {:repository_list => @function.repositories})
 
-%p
-  %b Name:
-  = @function.name
-%p
-  %b Description:
-  = @function.description
-%p
-  %b Slug:
-  = @function.slug
 
-= link_to 'Edit', edit_function_path(@function)
-\|
-= link_to 'Back', functions_path
+
+

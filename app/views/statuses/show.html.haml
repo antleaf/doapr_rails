@@ -1,15 +1,22 @@
-%p#notice= notice
+%h4.page-title
+  != "Status: <i>#{@status.name}</i>"
+%table.invisible-layout-table
+  %tr
+    %td.field-name Name:
+    %td
+      = @status.name
+  %tr
+    %td.field-name Description:
+    %td
+      = @status.description
+- if policy(Status).edit?
+  = link_to 'Edit', edit_status_path(@status), :class => "btn btn-secondary btn-sm"
+%hr
+%h5
+  !="Repositories with this status: <i>#{@status.name}</i>"
 
-%p
-  %b Name:
-  = @status.name
-%p
-  %b Description:
-  = @status.description
-%p
-  %b Slug:
-  = @status.slug
+= render(:partial => 'repositories/table',:locals => {:repository_list => @status.repositories})
 
-= link_to 'Edit', edit_status_path(@status)
-\|
-= link_to 'Back', statuses_path
+
+
+

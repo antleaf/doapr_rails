@@ -1,25 +1,17 @@
-%h1 Listing business_models
+%h4.page-title All Business Models
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th Slug
-      %th
-      %th
-      %th
+%div.row
+  %div.col-lg-6
+    - if policy(BusinessModel).create?
+      = link_to 'New Business Model', new_business_model_path, :class => "btn btn-secondary btn-sm"
+  %div.col-lg-6.right-aligned
+    -# = render "_shared/download_machine_readable_data_buttons"
 
-  %tbody
-    - @business_models.each do |business_model|
-      %tr
-        %td= business_model.name
-        %td= business_model.description
-        %td= business_model.slug
-        %td= link_to 'Show', business_model
-        %td= link_to 'Edit', edit_business_model_path(business_model)
-        %td= link_to 'Destroy', business_model, method: :delete, data: { confirm: 'Are you sure?' }
+= render(:partial => 'table',:locals => {:business_model_list => @business_models})
 
-%br
-
-= link_to 'New Business model', new_business_model_path
+%div.row
+  %div.col-lg-6
+    - if policy(BusinessModel).create?
+      = link_to 'New Business Model', new_business_model_path, :class => "btn btn-secondary btn-sm"
+  %div.col-lg-6.right-aligned
+    -# = render "_shared/download_machine_readable_data_buttons"

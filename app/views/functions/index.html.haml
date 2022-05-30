@@ -1,25 +1,17 @@
-%h1 Listing functions
+%h4.page-title All Functions
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th Slug
-      %th
-      %th
-      %th
+%div.row
+  %div.col-lg-6
+    - if policy(Function).create?
+      = link_to 'New Function', new_function_path, :class => "btn btn-secondary btn-sm"
+  %div.col-lg-6.right-aligned
+    -# = render "_shared/download_machine_readable_data_buttons"
 
-  %tbody
-    - @functions.each do |function|
-      %tr
-        %td= function.name
-        %td= function.description
-        %td= function.slug
-        %td= link_to 'Show', function
-        %td= link_to 'Edit', edit_function_path(function)
-        %td= link_to 'Destroy', function, method: :delete, data: { confirm: 'Are you sure?' }
+= render(:partial => 'table',:locals => {:function_list => @functions})
 
-%br
-
-= link_to 'New Function', new_function_path
+%div.row
+  %div.col-lg-6
+    - if policy(Function).create?
+      = link_to 'New Function', new_function_path, :class => "btn btn-secondary btn-sm"
+  %div.col-lg-6.right-aligned
+    -# = render "_shared/download_machine_readable_data_buttons"

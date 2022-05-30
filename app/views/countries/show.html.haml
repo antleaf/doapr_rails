@@ -14,32 +14,32 @@
     %td=@country.continent
 - if policy(Country).edit?
   = link_to 'Edit', edit_country_path(@country), :class => "btn btn-secondary btn-sm"
-%br
+%hr
 %h5
   !="Repositories based in: <i>#{@country.name}</i>"
 
 = render(:partial => 'repositories/table',:locals => {:repository_list => @country.repositories})
 
-
-
-%p#notice= notice
-
-%p
-  %b Name:
-  = @country.name
-%p
-  %b Code:
-  = @country.code
-%p
-  %b Latitude:
-  = @country.latitude
-%p
-  %b Longitude:
-  = @country.longitude
-%p
-  %b Continent:
-  = @country.continent
-
-= link_to 'Edit', edit_country_path(@country)
-\|
-= link_to 'Back', countries_path
+-#
+-#
+-# %p#notice= notice
+-#
+-# %p
+-#   %b Name:
+-#   = @country.name
+-# %p
+-#   %b Code:
+-#   = @country.code
+-# %p
+-#   %b Latitude:
+-#   = @country.latitude
+-# %p
+-#   %b Longitude:
+-#   = @country.longitude
+-# %p
+-#   %b Continent:
+-#   = @country.continent
+-#
+-# = link_to 'Edit', edit_country_path(@country)
+-# \|
+-# = link_to 'Back', countries_path

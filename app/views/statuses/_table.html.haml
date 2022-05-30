@@ -1,0 +1,25 @@
+%table{:class=>"sorted-table table table-condensed table-striped"}
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Repositories
+      - if (policy(Status).edit?)|(policy(Status).destroy?)
+        %th.actions Actions
+  %tbody
+    - status_list.each do |status|
+      %tr
+        %td.no-wrap
+          %div.hover-over{style:"width:100%;"}
+            = link_to status.name,status
+        %td
+          =status.description
+        %td=status.repositories.count
+        - if (policy(Status).edit?)|(policy(Status).destroy?)
+          %td.actions
+            - if policy(Status).edit?
+              -# = link_to image_tag('icons/edit.png',alt: 'Edit', title: 'Edit'),edit_country_path(country)
+              = link_to 'Edit', edit_status_path(status), :class => "btn btn-secondary btn-sm"
+            - if policy(Status).destroy?
+              -# = link_to image_tag('icons/delete.png',alt: 'Delete', title: 'Delete'), country, method: :delete, data: { confirm: 'Are you sure?' }
+              = link_to 'Delete', status, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-secondary btn-sm"

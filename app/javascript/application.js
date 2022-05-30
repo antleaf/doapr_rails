@@ -4,7 +4,8 @@ import "controllers"
 import jquery from 'jquery'
 import DataTable from 'datatables'
 import Rails from '@rails/ujs';
-
+// import bootstrap from 'bootstrap';
+import * as bootstrap from "bootstrap"
 Rails.start();
 
 window.jQuery = jquery
@@ -47,3 +48,5 @@ $('document').ready(function() {
         "columnDefs": [{targets: ['unsorted-column','actions'], orderable: false}],
     });
 });
+
+// $(".alert" ).fadeOut(4000);
