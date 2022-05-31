@@ -69,3 +69,8 @@
         Preservation Policy:
       %td
         = @repository.preservation_policy
+    %tr
+      %td.field-name
+        Functions:
+      %td
+        = render(:partial => 'feature_set',:locals => {:repository => @repository})

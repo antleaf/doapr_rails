@@ -1,0 +1,18 @@
+%table
+  %thead
+    %tr
+      %th Function
+      %th Service
+      %th Details
+  %tbody
+    - @repository.features.each do |feature|
+      %tr
+        %td
+          = feature.function.name
+        %td
+          - if feature.service then
+            = feature.service.name
+          - else
+            Local function
+        %td
+          = feature.description
