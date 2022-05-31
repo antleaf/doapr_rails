@@ -1,0 +1,59 @@
+%table.invisible-layout-table
+  %tr
+    %td.field-name
+      accessibility_of_conflict_of_interest_procedures:
+    %td.field-value
+      = f.text_field :accessibility_of_conflict_of_interest_procedures
+  %tr
+    %td.field-name
+      Business Model:
+    %td.field-value
+      - if @repository.new_record?
+        = f.select "business_model_id", options_from_collection_for_select(BusinessModel.all, "id", "name",1)
+      - else
+        = f.select "business_model_id", options_from_collection_for_select(BusinessModel.all, "id", "name", @repository.business_model.id)
+  %tr
+    %td.field-name
+      funding:
+    %td.field-value
+      = f.text_field :funding
+  %tr
+    %td.field-name
+      objectives:
+    %td.field-value
+      = f.text_field :objectives
+  %tr
+    %td.field-name
+      Owner Countries:
+    %td.field-value
+      -#@TODO
+  %tr
+    %td.field-name
+      owner_full_name:
+    %td.field-value
+      = f.text_field :owner_full_name
+    %tr
+      %td.field-name
+        owner_short_name:
+      %td.field-value
+        = f.text_field :owner_short_name
+    %tr
+      %td.field-name
+        owner_url:
+      %td.field-value
+        = f.text_field :owner_url
+    %tr
+      %td.field-name
+        ownership_type:
+      %td.field-value
+        = f.text_field :ownership_type
+    %tr
+      %td.field-name
+        scientific_technical_committees:
+      %td.field-value
+        = f.text_field :scientific_technical_committees
+    %tr
+      %td.field-name
+        user_committees:
+      %td.field-value
+        = f.text_field :user_committees

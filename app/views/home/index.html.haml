@@ -2,6 +2,23 @@ hello world!
 
 %div.row
   %div.col
-    left column
-  %div.col
-    right-column
+    -#%ul{class:"nav nav-tabs"}
+    -#  %li.nav-item
+    -#    %a{class:"nav-link active", "aria-current":"page", href:"#"}
+    -#      Active
+    -#  %li.nav-item
+    -#    %a{class:"nav-link", href:"#"}
+    -#      Link
+
+    %ul{class:"nav nav-tabs", id:"myTab",role:"tablist"}
+      %li{class:"nav-item",role:"presentation"}
+        %button{class:"nav-link active", id:"home-tab", "data-bs-toggle":"tab","data-bs-target":"#home", type:"button",role:"tab", "aria-controls":"home", "aria-selected":"true"}
+          Home
+      %li{class:"nav-item",role:"presentation"}
+        %button{class:"nav-link", id:"profile-tab", "data-bs-toggle":"tab","data-bs-target":"#profile", type:"button",role:"tab", "aria-controls":"profile", "aria-selected":"false"}
+          Profile
+    %div.tab-content#myTabContent
+      %div{class:"tab-pane fade show active",id:"home",role:"tabpanel","aria-labelledby":"home-tab"}
+        content in tab 1 here
+      %div{class:"tab-pane fade",id:"profile",role:"tabpanel","aria-labelledby":"profile-tab"}
+        content in tab 2 here
