@@ -21,4 +21,5 @@ class ApplicationController < ActionController::Base
   #   return if current_user
   #   redirect_to root_path, flash: { error: 'You are not worthy!' }
   # end
+  #
 end
