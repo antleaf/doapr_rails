@@ -1,9 +1,10 @@
 %h4.page-title
   = "Repository: #{@repository.full_name}"
+
 - if policy(Repository).edit?
-  = link_to 'Edit', edit_repository_path(@repository), :class => "btn btn-secondary btn-sm"
-%br
-%br
+  %div.edit-button
+    = link_to 'Edit', edit_repository_path(@repository), :class => "btn btn-secondary btn-sm"
+
 %ul{class:"nav nav-tabs", id:"myTab",role:"tablist"}
   %li{class:"nav-item",role:"presentation"}
     %button{class:"nav-link active tab-general", id:"home-tab", "data-bs-toggle":"tab","data-bs-target":"#home", type:"button",role:"tab", "aria-controls":"home", "aria-selected":"true"}
@@ -18,16 +19,16 @@
     %button{class:"nav-link tab-editorial", id:"editorial-tab", "data-bs-toggle":"tab","data-bs-target":"#editorial", type:"button",role:"tab", "aria-controls":"editorial", "aria-selected":"false"}
       Editorial Process
   %div.tab-content#tabContent
-    %div{class:"tab-pane fade show active", id:"home",role:"tabpanel","aria-labelledby":"home-tab",style:"background-color: #def3fd;"}
+    %div{class:"tab-pane fade show active tab-general", id:"home",role:"tabpanel","aria-labelledby":"home-tab"}
       = render(:partial => 'show_general',:locals => {:repository => @repository})
-    %div{class:"tab-pane fade", id:"governance",role:"tabpanel","aria-labelledby":"governance-tab",style:"background-color: #fcf7de;"}
+    %div{class:"tab-pane fade tab-governance", id:"governance",role:"tabpanel","aria-labelledby":"governance-tab"}
       = render(:partial => 'show_governance',:locals => {:repository => @repository})
-    %div{class:"tab-pane fade", id:"features",role:"tabpanel","aria-labelledby":"features-tab",style:"background-color: #fddfdf;"}
+    %div{class:"tab-pane fade tab-features", id:"features",role:"tabpanel","aria-labelledby":"features-tab"}
       = render(:partial => 'show_features',:locals => {:repository => @repository})
-    %div{class:"tab-pane fade", id:"editorial",role:"tabpanel","aria-labelledby":"editorial-tab",style:"background-color: #f0defd;"}
+    %div{class:"tab-pane fade tab-editorial", id:"editorial",role:"tabpanel","aria-labelledby":"editorial-tab"}
       = render(:partial => 'show_editorial',:locals => {:repository => @repository})
 
-%br
-%br
+
 - if policy(Repository).edit?
-  = link_to 'Edit', edit_repository_path(@repository), :class => "btn btn-secondary btn-sm"
+  %div.edit-button
+    = link_to 'Edit', edit_repository_path(@repository), :class => "btn btn-secondary btn-sm"

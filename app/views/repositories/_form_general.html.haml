@@ -1,92 +1,92 @@
 %table.invisible-layout-table
   %tr
     %td.field-name
-      url:
+      URL:
     %td.field-value
       = f.text_field :url
   %tr
     %td.field-name
-      full_name:
+      Full Name:
     %td.field-value
       = f.text_field :full_name
   %tr
     %td.field-name
-      short_name:
+      Short Name (or Acronym):
     %td.field-value
       = f.text_field :short_name
   %tr
     %td.field-name
-      description:
+      Description:
     %td.field-value
-      = f.text_field :description
+      = f.text_area :description, :rows => 3, :maxlength => "255"
   %tr
     %td.field-name
-      accepted_content_types:
+      Accepted Content Types:
     %td.field-value
       = f.text_field :accepted_content_types
   %tr
     %td.field-name
-      certificate_or_labels:
+      Certificate or Labels:
     %td.field-value
       = f.text_field :certificate_or_labels
   %tr
     %td.field-name
-      closure_date:
+      Closure Date:
     %td.field-value
       = f.text_field :closure_date
   %tr
     %td.field-name
-      contact:
+      Contact:
     %td.field-value
       = f.text_field :contact
   %tr
     %td.field-name
-      disciplinary_scope:
+      Disciplinary Scope:
     %td.field-value
       = f.text_field :disciplinary_scope
   %tr
     %td.field-name
-      keywords:
+      Keywords:
     %td.field-value
       = f.text_field :keywords
   %tr
     %td.field-name
-      launch_date:
+      Launch Date:
     %td.field-value
       = f.text_field :launch_date
   %tr
     %td.field-name
-      oai_pmh_url:
+      OAI-PMH URL:
     %td.field-value
       = f.text_field :oai_pmh_url
   %tr
     %td.field-name
-      opendoar_id:
+      OpenDOAR ID:
     %td.field-value
       = f.text_field :opendoar_id
   %tr
     %td.field-name
-      platform:
+      Platform:
     %td.field-value
       = f.text_field :platform
   %tr
     %td.field-name
-      platform_languages:
+      Platform Languages:
     %td.field-value
       = f.text_field :platform_languages
   %tr
     %td.field-name
-      record_count:
+      Record Count:
     %td.field-value
       = f.text_field :record_count
   %tr
     %td.field-name
-      repository_type:
+      Repository Type:
     %td.field-value
       = f.text_field :repository_type
   %tr
     %td.field-name
-      service_pricing:
+      Service Pricing:
     %td.field-value
       = f.text_field :service_pricing
   %tr
@@ -99,11 +99,19 @@
         = f.select "status_id", options_from_collection_for_select(Status.all, "id", "name", @repository.status.id)
   %tr
     %td.field-name
-      terms_of_use:
+      Terms of Use:
     %td.field-value
       = f.text_field :terms_of_use
   %tr
     %td.field-name
-      last_update:
+      Last Update:
     %td.field-value
       = f.text_field :last_update
+  %tr
+    %td.field-name
+      Editorial Notes:
+      %br
+        %i (not displayed to users)
+    %td.field-value
+      -# = f.text_field :editorial_notes
+      = f.text_area :editorial_notes, :rows => 3, :maxlength => "255", :class => 'editorial-comment-field'

@@ -5,23 +5,27 @@
       %ul
         - @repository.errors.full_messages.each do |message|
           %li= message
-  %ul{class:"nav nav-pills mb-3", id:"pills-tab", role:"tablist"}
-    %li{class: "nav-item", role:"presentation"}
-      %button{class:"nav-link active", id:"pills-home-tab", "data-bs-toggle":"pill", "data-bs-target":"#pills-home", type:"button", role:"tab","aria-controls":"pills-home", "aria-selected":"true"} General
-    %li{class: "nav-item", role:"presentation"}
-      %button{class:"nav-link", id:"pills-governance-tab", "data-bs-toggle":"pill", "data-bs-target":"#pills-governance", type:"button", role:"tab","aria-controls":"pills-governance", "aria-selected":"true"} Governance
-    %li{class: "nav-item", role:"presentation"}
-      %button{class:"nav-link", id:"pills-features-tab", "data-bs-toggle":"pill", "data-bs-target":"#pills-features", type:"button", role:"tab","aria-controls":"pills-features", "aria-selected":"true"} Features &amp; Functions
-    %li{class: "nav-item", role:"presentation"}
-      %button{class:"nav-link", id:"pills-editorial-tab", "data-bs-toggle":"pill", "data-bs-target":"#pills-editorial", type:"button", role:"tab","aria-controls":"pills-editorial", "aria-selected":"true"} Editorial Process
-  %div.tab-content#pills-tabContent
-    %div{class:"tab-pane fade show active", id:"pills-home",role:"tabpanel","aria-labelledby":"pills-home-tab",style:"background-color: #def3fd;"}
+  %ul{class:"nav nav-tabs", id:"myTab",role:"tablist"}
+    %li{class:"nav-item",role:"presentation"}
+      %button{class:"nav-link active tab-general", id:"home-tab", "data-bs-toggle":"tab","data-bs-target":"#home", type:"button",role:"tab", "aria-controls":"home", "aria-selected":"true"}
+        General
+    %li{class:"nav-item",role:"presentation"}
+      %button{class:"nav-link tab-governance", id:"governance-tab", "data-bs-toggle":"tab","data-bs-target":"#governance", type:"button",role:"tab", "aria-controls":"governance", "aria-selected":"false"}
+        Governance
+    %li{class:"nav-item",role:"presentation"}
+      %button{class:"nav-link tab-features", id:"features-tab", "data-bs-toggle":"tab","data-bs-target":"#features", type:"button",role:"tab", "aria-controls":"features", "aria-selected":"false"}
+        Features &amp; Functions
+    %li{class:"nav-item",role:"presentation"}
+      %button{class:"nav-link tab-editorial", id:"editorial-tab", "data-bs-toggle":"tab","data-bs-target":"#editorial", type:"button",role:"tab", "aria-controls":"editorial", "aria-selected":"false"}
+        Editorial Process
+  %div.tab-content#tabContent
+    %div{class:"tab-pane fade show active tab-general", id:"home",role:"tabpanel","aria-labelledby":"home-tab"}
       = render(:partial => 'form_general',:locals => {:f => f})
-    %div{class:"tab-pane fade", id:"pills-governance",role:"tabpanel","aria-labelledby":"pills-governance-tab",style:"background-color: #fcf7de;"}
+    %div{class:"tab-pane fade tab-governance", id:"governance",role:"tabpanel","aria-labelledby":"governance-tab"}
       = render(:partial => 'form_governance',:locals => {:f => f})
-    %div{class:"tab-pane fade", id:"pills-features",role:"tabpanel","aria-labelledby":"pills-features-tab",style:"background-color: #fddfdf;"}
+    %div{class:"tab-pane fade tab-features", id:"features",role:"tabpanel","aria-labelledby":"features-tab"}
       = render(:partial => 'form_features',:locals => {:f => f})
-    %div{class:"tab-pane fade", id:"pills-editorial",role:"tabpanel","aria-labelledby":"pills-editorial-tab",style:"background-color: #f0defd;"}
+    %div{class:"tab-pane fade tab-editorial", id:"editorial",role:"tabpanel","aria-labelledby":"editorial-tab"}
       = render(:partial => 'form_editorial',:locals => {:f => f})
   .actions
     = link_to 'Cancel', @repository, :class => "btn btn-secondary btn-sm"

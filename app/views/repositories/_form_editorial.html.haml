@@ -2,122 +2,116 @@
   %table.invisible-layout-table
     %tr
       %td.field-name
-        academic_applicant_only:
+        Academic Applicant Only?:
       %td.field-value
         = f.text_field :academic_applicant_only
     %tr
       %td.field-name
-        accepted_content_formats:
+        Accepted Content Formats:
       %td.field-value
         = f.text_field :accepted_content_formats
     %tr
       %td.field-name
-        accepted_content_languages:
+        Accepted Content Languages:
       %td.field-value
         = f.text_field :accepted_content_languages
     %tr
       %td.field-name
-        accepted_content_level:
+        Accepted Content Level:
       %td.field-value
         = f.text_field :accepted_content_level
-
     %tr
       %td.field-name
-        accepted_supplementary_content:
+        Accepted Supplementary Content:
       %td.field-value
-        = f.text_field :accepted_supplementary_content
+        = f.text_area :accepted_supplementary_content, :rows => 3, :maxlength => "255"
     %tr
       %td.field-name
-        associated_editor:
+        Associated Editor:
       %td.field-value
         = f.text_field :associated_editor
     %tr
       %td.field-name
-        associated_journal:
+        Associated Journal:
       %td.field-value
         = f.text_field :associated_journal
     %tr
       %td.field-name
-        author_pid:
+        Author PID:
       %td.field-value
         = f.text_field :author_pid
     %tr
       %td.field-name
-        availability_of_associated_content:
+        Availability of Associated Content:
       %td.field-value
-        = f.text_field :availability_of_associated_content
+        = f.text_area :availability_of_associated_content, :rows => 3, :maxlength => "255"
     %tr
       %td.field-name
-        editorial_notes:
-      %td.field-value
-        = f.text_field :editorial_notes
-    %tr
-      %td.field-name
-        journal_submission:
+        Journal Submission:
       %td.field-value
         = f.text_field :journal_submission
     %tr
       %td.field-name
-        licensing:
+        Licensing:
       %td.field-value
         = f.text_field :licensing
     %tr
       %td.field-name
-        mechanisms_to_report_concerns_about_content:
+        Mechanisms to Report Concerns About Content:
       %td.field-value
         = f.text_field :mechanisms_to_report_concerns_about_content
     %tr
       %td.field-name
-        mechanisms_to_report_concerns_about_plagiarism:
+        Mechanisms to Report Concerns About Plagiarism:
       %td.field-value
         = f.text_field :mechanisms_to_report_concerns_about_plagiarism
     %tr
       %td.field-name
-        moderation:
+        Moderation:
       %td.field-value
-        = f.text_field :moderation
+        = f.text_area :moderation, :rows => 3, :maxlength => "255"
     %tr
       %td.field-name
-        peer_review_status_indication:
+        Peer Review Status Indication:
       %td.field-value
         = f.text_field :peer_review_status_indication
     %tr
       %td.field-name
-        persistent_identifier:
+        Persistent Identifier:
       %td.field-value
         = f.text_field :persistent_identifier
     %tr
       %td.field-name
-        remining_indrawn_item:
+        RemAining Indrawn Item:
       %td.field-value
         = f.text_field :remining_indrawn_item
     %tr
       %td.field-name
-        text_embargo:
+        Text Embargo:
       %td.field-value
         = f.text_field :text_embargo
     %tr
       %td.field-name
-        time_from_submission_to_posting:
+        Time from Submission to Posting:
       %td.field-value
         = f.text_field :time_from_submission_to_posting
     %tr
       %td.field-name
-        versioning_policy:
+        Versioning Policy:
       %td.field-value
         = f.text_field :versioning_policy
     %tr
       %td.field-name
-        who_can_deposit:
+        Who can Deposit?:
       %td.field-value
         = f.text_field :who_can_deposit
     %tr
       %td.field-name
-        withdrawal_authorisation:
+        Withdrawal Authorisation:
       %td.field-value
         = f.text_field :withdrawal_authorisation
     %tr
       %td.field-name
-        withdrawal_policy:
+        Withdrawal Policy:
       %td.field-value
         = f.text_field :withdrawal_policy

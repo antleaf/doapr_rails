@@ -1,71 +1,71 @@
 %table.invisible-layout-table
   %tr
     %td.field-name
-      access_to_content:
+      Access to Content:
     %td.field-value
       = f.text_field :access_to_content
     %tr
       %td.field-name
-        access_to_metadata:
+        Access to Metadata:
       %td.field-value
         = f.text_field :access_to_metadata
     %tr
       %td.field-name
-        account_creation:
+        Account Creation:
       %td.field-value
         = f.text_field :account_creation
     %tr
       %td.field-name
-        backups:
+        Backups:
       %td.field-value
         = f.text_field :backups
     %tr
       %td.field-name
-        functional_description:
+        Functional Description:
       %td.field-value
         = f.text_field :functional_description
     %tr
       %td.field-name
-        interoperability:
+        Interoperability:
       %td.field-value
         = f.text_field :interoperability
     %tr
       %td.field-name
-        metadata_formats:
+        Metadata Formats:
       %td.field-value
         = f.text_field :metadata_formats
     %tr
       %td.field-name
-        metadata_languages:
+        Metadata Languages:
       %td.field-value
         = f.text_field :metadata_languages
     %tr
       %td.field-name
-        metadata_properties:
+        Metadata Properties:
       %td.field-value
-        = f.text_field :metadata_properties
+        = f.text_area :metadata_properties, :rows => 3, :maxlength => "255"
     %tr
       %td.field-name
-        method_for_reuse_of_metadata:
+        Method for Reuse of Metadata:
       %td.field-value
         = f.text_field :method_for_reuse_of_metadata
     %tr
       %td.field-name
-        open_source:
+        Open Source:
       %td.field-value
         = f.text_field :open_source
     %tr
       %td.field-name
-        permission_for_re_use_of_metadata:
+        Permission for Re-use of Metadata:
       %td.field-value
         = f.text_field :permission_for_re_use_of_metadata
     %tr
       %td.field-name
-        persistence_of_content:
+        Persistence of Content:
       %td.field-value
         = f.text_field :persistence_of_content
     %tr
       %td.field-name
-        preservation_policy:
+        Preservation Policy:
       %td.field-value
         = f.text_field :preservation_policy
